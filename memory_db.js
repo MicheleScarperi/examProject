@@ -4,15 +4,15 @@ var cardsDb = [{
     urlSecondImg: "https://middleeasttransparent.com/wp-content/uploads/2017/10/TUMP.jpg",
 }, {
     name: "Merkel",
-    urlFirstImg: "", 
+    urlFirstImg: "img/angela.jpg", 
     urlSecondImg: "",  
 }, {
     name: "Brian",
-    urlFirstImg: "", 
+    urlFirstImg: "img/brian.jpg", 
     urlSecondImg: "", 
 }, {
     name: "Einstein",
-    urlFirstImg: "", 
+    urlFirstImg: "img/einstein.jpg", 
     urlSecondImg: "", 
 }, {
     name: "Messi",
