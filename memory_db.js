@@ -5,70 +5,70 @@ var cardsDb = [{
 }, {
     name: "Merkel",
     urlFirstImg: "img/angela.jpg", 
-    urlSecondImg: "",  
+    urlSecondImg: "",  //add a match 
 }, {
     name: "Brian",
     urlFirstImg: "img/brian.jpg", 
-    urlSecondImg: "", 
+    urlSecondImg: "", // add a match 
 }, {
     name: "Einstein",
     urlFirstImg: "img/einstein.jpg", 
-    urlSecondImg: "", 
+    urlSecondImg: "", // add a match 
 }, {
     name: "Messi",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    urlFirstImg: "img/messi.jpg", 
+    urlSecondImg: "", // add a match 
 }, {
     name: "Fyre",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    urlFirstImg: "img/tile.jpg", 
+    urlSecondImg: "img/tilematch.png", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "CocoChanel",
+    urlFirstImg: "img/coco_chanel.jpg", 
+    urlSecondImg: "img/text_coco_chanel.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "KanyeWest",
+    urlFirstImg: "img/kanye_west.jpg", 
+    urlSecondImg: "img/text_kanye_west.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "TonyRobbins",
+    urlFirstImg: "img/tony_robbins.jpg", 
+    urlSecondImg: "img/text_tony_robbins.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "Aristotle",
+    urlFirstImg: "img/aristotle.jpg", 
+    urlSecondImg: "img/text_aristotle.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "Cesar",
+    urlFirstImg: "img/julio-cesar.jpg", 
+    urlSecondImg: "img/text_julius_cesar.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "TheresaMay",
+    urlFirstImg: "img/theresa_may.jpg", 
+    urlSecondImg: "img/text_theresa_may.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "SherlySandberg",
+    urlFirstImg: "img/sherly_sandberg.jpg", 
+    urlSecondImg: "img/text_sherly_sandberg.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "Chopra",
+    urlFirstImg: "img/Chopra.jpg", 
+    urlSecondImg: "img/text_chopra.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "Andretti",
+    urlFirstImg: "img/andretti.jpg", 
+    urlSecondImg: "img/text_andretti.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "Jobs",
+    urlFirstImg: "img/jobs.png", 
+    urlSecondImg: "img/text_jobs.jpg", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "Obama",
+    urlFirstImg: "img/obama.jpeg", 
+    urlSecondImg: "img/text_obama.png", 
 }, {
-    name: "",
-    urlFirstImg: "", 
-    urlSecondImg: "", 
+    name: "Macron",
+    urlFirstImg: "img/macron.jpg", 
+    urlSecondImg: "img/text_macron.png", 
 }]
 
