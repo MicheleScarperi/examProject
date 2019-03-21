@@ -1,7 +1,7 @@
 var cardsDb = [{
     name: "trump",
-    urlFirstImg: "https://middleeasttransparent.com/wp-content/uploads/2017/10/TUMP.jpg",
-    urlSecondImg: "https://middleeasttransparent.com/wp-content/uploads/2017/10/TUMP.jpg",
+    urlFirstImg: "img/trump.jpg",
+    urlSecondImg: "img/maga.jpg",
 }, {
     name: "Merkel",
     urlFirstImg: "img/angela.jpg", 
