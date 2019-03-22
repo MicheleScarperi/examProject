@@ -10,6 +10,6 @@ function initializeGame() {
                         <img src="${pairOfCards.urlSecondImg}">
                     </div>`;
         var container = document.getElementById('cards-wrapper')
-        container.insertAdjacentHTML('afterbegin', html);
+        container.insertAdjacentHTML('afterbegin', html); //this copies the html element and inserts it afterbegin, the copy is the html var
     })
 }
