@@ -5,19 +5,19 @@ var cardsDb = [{
 }, {
     name: "Merkel",
     urlFirstImg: "img/angela.jpg", 
-    urlSecondImg: "",  //add a match 
+    urlSecondImg: "img/cdu.jpg",
 }, {
     name: "Brian",
     urlFirstImg: "img/brian.jpg", 
-    urlSecondImg: "", // add a match 
+    urlSecondImg: "img/badluck.jpg",
 }, {
     name: "Einstein",
     urlFirstImg: "img/einstein.jpg", 
-    urlSecondImg: "", // add a match 
+    urlSecondImg: "img/einsteine.png", 
 }, {
     name: "Messi",
     urlFirstImg: "img/messi.jpg", 
-    urlSecondImg: "", // add a match 
+    urlSecondImg: "img/goat.png",
 }, {
     name: "Fyre",
     urlFirstImg: "img/tile.jpg", 
