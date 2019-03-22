@@ -1,9 +1,13 @@
 #cards-wrapper{
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
+    width: 620px;
     height: 560px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+}
+
+.card{
+    margin: 5px;
 }
