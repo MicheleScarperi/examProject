@@ -16,6 +16,11 @@
 
 }
 
+.back-card:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
 .back-card.flip {
     transform: rotateY(180deg);
 }
@@ -24,10 +29,6 @@
     position: absolute;
 }
 
-/*.card{
-    margin: 5px;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-}*/
+
 
 
