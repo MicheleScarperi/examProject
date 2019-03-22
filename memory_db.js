@@ -32,8 +32,8 @@ var cardsDb = [{
     urlSecondImg: "img/text_kanye_west.jpg", 
 }, {
     name: "TonyRobbins",
-    urlFirstImg: "img/tony_robbins.jpg", 
-    urlSecondImg: "img/text_tony_robbins.jpeg", 
+    urlFirstImg: "img/tony_robbins.jpeg", 
+    urlSecondImg: "img/text_tony_robbins.jpg", 
 }, {
     name: "Aristotle",
     urlFirstImg: "img/aristotle.jpg", 
