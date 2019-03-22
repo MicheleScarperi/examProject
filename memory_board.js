@@ -18,9 +18,8 @@ function initializeGame() {
 
 const cards = document.querySelector('.back-card');
 
+//This function triggers at click, but we cannot get the CSS connection to work (throws a ref. error)
 function flipCard() {
     back-card.classList.toggle('flip');
 }
-
-//cards.forEach(card => card.addEventListener('click', flipCard));
 
