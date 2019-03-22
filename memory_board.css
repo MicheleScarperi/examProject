@@ -2,13 +2,8 @@
 height: 100%;
 }
 
-.cards-wrapper{
+#cards-wrapper{
     display: flex;
-    
-}
-
-.memory_db.js{
-    height: 92px;
-  width: 92px;
-  border-radius: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
