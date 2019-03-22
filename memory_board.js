@@ -3,11 +3,15 @@ document.addEventListener('DOMContentLoaded', initializeGame, false);
 
 function initializeGame() {
     cardsDb.forEach(function(pairOfCards){
-        var html = `<div onclick="flipCard()" class="card" data-attribute="${pairOfCards.name}">
+        var html = `<div onclick="flipCard()" class="back-card" data-attribute="${pairOfCards.name}">
                         <img src="${pairOfCards.urlFirstImg}" height="92" width="92" opacity: 0.5>
+                    <div class="front-card">
+                        <img src="${pairOfCards.front_face}" height="92" width="92">
                     </div>
-                    <div onclick="flipCard()" class="card" data-attribute="${pairOfCards.name}">
+                    <div onclick="flipCard()" class="back-card" data-attribute="${pairOfCards.name}">
                         <img src="${pairOfCards.urlSecondImg}" height="92" width="92" opacity: 0.5;>
+                    <div class="front-card">
+                        <img src="${pairOfCards.front_face}" height="92" width="92">
                     </div>`;
         var container = document.getElementById('cards-wrapper')
         container.insertAdjacentHTML('afterbegin', html); //this copies the html element and inserts it afterbegin, the copy is the html var
