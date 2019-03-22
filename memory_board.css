@@ -11,4 +11,5 @@
 .card{
     margin: 5px;
     transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
