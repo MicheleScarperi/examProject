@@ -5,7 +5,7 @@ var cardsDb = [{
 }, {
     name: "Merkel",
     urlFirstImg: "img/angela.jpg", 
-    urlSecondImg: "",  //add a match 
+    urlSecondImg: "img/cdu.jpg",
 }, {
     name: "Brian",
     urlFirstImg: "img/brian.jpg", 
