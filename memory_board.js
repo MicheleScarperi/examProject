@@ -5,12 +5,10 @@ function initializeGame() {
     cardsDb.forEach(function(pairOfCards){
         var html = `<div onclick="flipCard()" class="back-card" data-attribute="${pairOfCards.name}">
                         <img src="${pairOfCards.urlFirstImg}" height="92" width="92" opacity: 0.5>
-                    <div class="front-card">
                         <img src="${pairOfCards.front_face}" height="92" width="92">
                     </div>
                     <div onclick="flipCard()" class="back-card" data-attribute="${pairOfCards.name}">
                         <img src="${pairOfCards.urlSecondImg}" height="92" width="92" opacity: 0.5;>
-                    <div class="front-card">
                         <img src="${pairOfCards.front_face}" height="92" width="92">
                     </div>`;
         var container = document.getElementById('cards-wrapper')
