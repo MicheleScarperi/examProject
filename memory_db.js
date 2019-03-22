@@ -33,7 +33,7 @@ var cardsDb = [{
 }, {
     name: "TonyRobbins",
     urlFirstImg: "img/tony_robbins.jpg", 
-    urlSecondImg: "img/text_tony_robbins.jpg", 
+    urlSecondImg: "img/text_tony_robbins.jpeg", 
 }, {
     name: "Aristotle",
     urlFirstImg: "img/aristotle.jpg", 
