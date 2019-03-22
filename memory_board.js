@@ -19,8 +19,9 @@ function initializeGame() {
 const cards = document.querySelector('.back-card');
 
 function flipCard() {
-    this.classList.toggle('flip');
+    //this.classList.toggle('flip');
+    console.log("hi");
 }
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+//cards.forEach(card => card.addEventListener('click', flipCard));
 
