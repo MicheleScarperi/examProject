@@ -8,6 +8,17 @@
     margin-top: 50px;
 }
 
+.back-card{
+    position: relative;
+
+}
+
+.img1, .img2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 /*.card{
     margin: 5px;
     transform: rotateY(180deg);
