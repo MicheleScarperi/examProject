@@ -16,6 +16,10 @@
 
 }
 
+.back-card.flip {
+    transform: rotateY(180deg);
+}
+
 .img1, .img2{
     position: absolute;
 }

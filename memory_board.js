@@ -16,3 +16,11 @@ function initializeGame() {
     })
 }
 
+const cards = document.querySelector('.back-card');
+
+function flipCard() {
+    this.classList.toggle('flip');
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
