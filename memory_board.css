@@ -1,12 +1,9 @@
-#board{
-height: 100%;
-}
-
 #cards-wrapper{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    width: 600px;
+    height: 560px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
