@@ -16,9 +16,9 @@ function initializeGame() {
 
 const cards = document.querySelector('.back_card');
 
-//
+//This function flips a card 180° by using css. 
 function flipCard(element) {
     element.classList.toggle('flip');
 }
 
-//If statement to ch
+
