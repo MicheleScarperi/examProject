@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', initializeGame, false);
 
 function initializeGame() {
     cardsDb.forEach(function(cardInput){
-        var html = `<div onclick="flipCard(this)" class="back_card" data-attribute="${cardInput.name}">
+        var html = `<div onclick="flipCard(this)" class="back_card" data-attribute="${cardInput.name}" data-framework="${cardInput.name}">
                         <img class="img1" src="${cardInput.img}" height="110" width="110" opacity: 0.5>
                         <img class="img2" src="${cardInput.front_face}" height="110" width="110">
                     </div>`;
@@ -30,17 +30,7 @@ var secondCard;
         // do somehting 
   //  } 
 //} 
-function disableCards(){
-    firstCard.removeEventListener('click',flipCard);
-    secondCard.removeEventListener('click', flipCard);
 
-    resetBoard();
-}
-
-function resetBoard() {
-    [hasFlipped, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-}
 //This function flips a card 180° by using css. 
 function flipCard(element) {
     if (lockBoard) return;
@@ -56,13 +46,22 @@ function flipCard(element) {
 secondCard = this;
 
 function checkMatchCards () {
-    if (firstCard.cardsDb.name === secondCard.cardsDb.name) {
+    //this line of code is probably not working as we want it to. 
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
         disableCards();
         return;
     }
     unFlipCards();
 }
 checkMatchCards();
+
+function disableCards(){
+    firstCard.removeEventListener('click',flipCard);
+    secondCard.removeEventListener('click', flipCard);
+
+    resetBoard();
+}
+
 
 function unFlipCards() {
     lockBoard = true;
@@ -72,4 +71,9 @@ function unFlipCards() {
 
         resetBoard();
     }, 1500)
+}
+
+function resetBoard() {
+    [hasFlipped, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
 }
