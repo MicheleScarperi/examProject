@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', initializeGame, false);
 function initializeGame() {
     cardsDb.forEach(function(cardInput){
         var html = `<div onclick="flipCard(this)" class="back_card" data-attribute="${cardInput.name}">
-                        <img class="img1" src="${cardInput.img}" height="92" width="92" opacity: 0.5>
-                        <img class="img2" src="${cardInput.front_face}" height="92" width="92">
+                        <img class="img1" src="${cardInput.img}" height="110" width="110" opacity: 0.5>
+                        <img class="img2" src="${cardInput.front_face}" height="110" width="110">
                     </div>`;
 
         var container = document.getElementById('cards-wrapper')
