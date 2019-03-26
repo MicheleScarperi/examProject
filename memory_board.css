@@ -13,11 +13,9 @@
     width: 94px;
     height: 94px;
     padding: 8px;
+    transform-style: preserve-3d;
+}
 
-}
-.img2{
-  visibility: hidden;
-}
 
 .back_card:active{
     transform: scale(0.97);
@@ -26,12 +24,14 @@
 
 .back_card.flip {
     transform: rotateY(180deg);
+    transition: 0.9s;
 }
 
 .img1, .img2{
     position: absolute;
-}
+    backface-visibility: hidden;
 
+}
 
 
 
