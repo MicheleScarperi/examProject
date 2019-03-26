@@ -161,6 +161,7 @@ cardsDb.forEach(function(element) {
     
 });
 
+// This is the section, that randomizes the memory cards on the board. 
 const randomArray=[];
 
 
@@ -190,4 +191,10 @@ function shuffle(cardsDb) {
   // Shuffle cardsDb "elements"
   
   cardsDb = shuffle(cardsDb);
-  console.log(cardsDb);
+  
+  // A function that checks whether we have a match or not. 
+function checkMatchCards() {
+      if (cardsDb.name === cardsDb.name) {
+          // do somehting 
+      } 
+} 
