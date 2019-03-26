@@ -192,9 +192,3 @@ function shuffle(cardsDb) {
   
   cardsDb = shuffle(cardsDb);
   
-  // A function that checks whether we have a match or not. 
-function checkMatchCards() {
-      if (cardsDb.name === cardsDb.name) {
-          // do somehting 
-      } 
-} 
