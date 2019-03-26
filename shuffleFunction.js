@@ -1,5 +1,5 @@
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+function shuffle(cardsDb) {
+    var currentIndex = cardsDb.length, temporaryValue, randomIndex;
   
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
@@ -9,20 +9,20 @@ function shuffle(array) {
       currentIndex -= 1;
   
       // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+      temporaryValue = cardsDb[currentIndex];
+      cardsDb[currentIndex] = cardsDb[randomIndex];
+      cardsDb[randomIndex] = temporaryValue;
     }
   
-    return array;
+    return cardsDb;
   }
   
   // Create a function to flip the picture on the game //
   
-  var array = cardsDb;
+  // var cardsDb = cardsDb;
   
-  // Shuffle array "elements"
+  // Shuffle cardsDb "elements"
   
-  array = shuffle(array);
-  console.log(array);
+  cardsDb = shuffle(cardsDb);
+  console.log(cardsDb);
   
