@@ -16,8 +16,15 @@ function initializeGame() {
 
 const cards = document.querySelectorAll('.back_card');
 // This adds an event listener to all cards in the DB. To check later on whether a card has been flipped or not. 
-cardsDb.forEach(card => card.addEventListener('click', flipCard));
-
+/*
+function addevent(card){
+    for (i=0; i<cardsDb.length; i++){
+        cardsDb.addEventListener('click', flipCard);
+    }
+    
+};
+addevent();
+*/
 var hasFlipped = false; 
 var lockBoard = false;
 var firstCard; 
@@ -30,6 +37,7 @@ var secondCard;
         // do somehting 
   //  } 
 //} 
+
 function disableCards(){
     firstCard.removeEventListener('click',flipCard);
     secondCard.removeEventListener('click', flipCard);
