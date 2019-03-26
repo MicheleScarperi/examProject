@@ -21,4 +21,4 @@ function flipCard(element) {
     element.classList.toggle('flip');
 }
 
-//If statement to ch
+
