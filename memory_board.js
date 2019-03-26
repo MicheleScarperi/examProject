@@ -24,9 +24,10 @@ function flipCard(element){
     element.classList.toggle('flip');
     console.log("FlipCard works!!");
     console.log(counter);
-    
+
     counter++;
 }
+
 
 var counter = 0;
 
