@@ -4,7 +4,6 @@ var cardsDb = [{
 },   
 {   name: "trump",
     img: "img/maga.jpg",
-    
 }, 
 {
     name: "Merkel",
@@ -20,7 +19,6 @@ var cardsDb = [{
 },
 {   name: "Brian",
     img: "img/badluck.jpg",
-    
 }, 
 {
     name: "Einstein",
@@ -45,7 +43,6 @@ var cardsDb = [{
 {
     name: "Fyre",
     img: "img/tilematch.png",
-    
 }, 
 {
     name: "CocoChanel",
@@ -53,7 +50,6 @@ var cardsDb = [{
 },    
 {   name: "CocoChanel", 
     img: "img/text_coco_chanel.jpg",
-    
 }, 
 {
     name: "KanyeWest",
@@ -62,7 +58,6 @@ var cardsDb = [{
 {
     name: "KanyeWest",
     img: "img/text_kanye_west.jpg",
-     
 }, 
 {
     name: "TonyRobbins",
@@ -79,7 +74,6 @@ var cardsDb = [{
 {
     name: "Aristotle",
     img: "img/text_aristotle.jpg",
-     
 }, 
 {
     name: "Cesar",
@@ -87,17 +81,14 @@ var cardsDb = [{
 },
 {   
     name: "Cesar",
-    img: "img/text_julius_cesar.jpg", 
-    
+    img: "img/text_julius_cesar.jpg",
 }, 
 {
     name: "TheresaMay",
     img: "img/theresa_may.jpg",
 },{
- 
     name: "TheresaMay",
     img: "img/text_theresa_may.jpg", 
-    
 }, 
 {
     name: "SherylSandberg",
@@ -106,7 +97,6 @@ var cardsDb = [{
 { 
     name: "SherylSandberg",
     img: "img/text_sherly_sandberg.jpg", 
-    
 }, 
 {
     name: "Chopra",
@@ -115,7 +105,6 @@ var cardsDb = [{
 { 
     name: "Chopra",
     img: "img/text_chopra.jpg", 
-    
 }, 
 {
     name: "Andretti",
@@ -124,7 +113,6 @@ var cardsDb = [{
 {
     name: "Andretti",
     img: "img/text_andretti.jpg",
-    
 }, 
 {
     name: "Jobs",
@@ -133,7 +121,6 @@ var cardsDb = [{
 {    
     name: "Jobs",
     img: "img/text_jobs.jpg", 
-    
 }, 
 {
     name: "Obama",
@@ -142,7 +129,6 @@ var cardsDb = [{
 {   
     name: "Obama",
     img: "img/text_obama.png",
-   
 },
 {
     name: "Macron",
@@ -151,7 +137,6 @@ var cardsDb = [{
 {   
     name: "Macron",
     img: "img/text_macron.png", 
-    
 }];
 
 cardsDb.forEach(function(element) {
