@@ -1,100 +1,168 @@
 var cardsDb = [{
     name: "trump",
-    urlFirstImg: "img/trump.jpg",
-    urlSecondImg: "img/maga.jpg",
+    img: "img/trump.jpg",
+},   
+{   name: "trump",
+    img: "img/maga.jpg",
     
-}, {
+}, 
+{
     name: "Merkel",
-    urlFirstImg: "img/angela.jpg", 
-    urlSecondImg: "img/cdu.jpg",
-    
-}, {
+    img: "img/angela.jpg", 
+},    
+{    
+    name: "Merkel",
+    img: "img/cdu.jpg",
+}, 
+{
     name: "Brian",
-    urlFirstImg: "img/brian.jpg", 
-    urlSecondImg: "img/badluck.jpg",
+    img: "img/brian.jpg", 
+},
+{   name: "Brian",
+    img: "img/badluck.jpg",
     
-}, {
+}, 
+{
     name: "Einstein",
-    urlFirstImg: "img/einstein.jpg", 
-    urlSecondImg: "img/einsteine.png", 
-    
-}, {
+    img: "img/einstein.jpg", 
+},
+{    
+    name: "Einstein",
+    img: "img/einsteine.png",  
+}, 
+{
     name: "Messi",
-    urlFirstImg: "img/messi.jpg", 
-    urlSecondImg: "img/goat.png",
-    
-}, {
+    img: "img/messi.jpg",
+},
+{
+    name: "Messi",
+    img: "img/goat.png",  
+}, 
+{
     name: "Fyre",
-    urlFirstImg: "img/tile.jpg", 
-    urlSecondImg: "img/tilematch.png",
+    img: "img/tile.jpg", 
+},
+{
+    name: "Fyre",
+    img: "img/tilematch.png",
     
-}, {
+}, 
+{
     name: "CocoChanel",
-    urlFirstImg: "img/coco_chanel.jpg", 
-    urlSecondImg: "img/text_coco_chanel.jpg",
+    img: "img/coco_chanel.jpg", 
+},    
+{   name: "CocoChanel", 
+    img: "img/text_coco_chanel.jpg",
     
-}, {
+}, 
+{
     name: "KanyeWest",
-    urlFirstImg: "img/kanye_west.jpg", 
-    urlSecondImg: "img/text_kanye_west.jpg",
+    img: "img/kanye_west.jpg", 
+},
+{
+    name: "KanyeWest",
+    img: "img/text_kanye_west.jpg",
      
-}, {
+}, 
+{
     name: "TonyRobbins",
-    urlFirstImg: "img/tony_robbins.jpeg", 
-    urlSecondImg: "img/text_tony_robbins.jpg",
+    img: "img/tony_robbins.jpeg",
+},
+{ 
+    name: "TonyRobbins",
+    img: "img/text_tony_robbins.jpg",
      
 }, {
     name: "Aristotle",
-    urlFirstImg: "img/aristotle.jpg", 
-    urlSecondImg: "img/text_aristotle.jpg",
+    img: "img/aristotle.jpg", 
+},
+{
+    name: "Aristotle",
+    img: "img/text_aristotle.jpg",
      
-}, {
+}, 
+{
     name: "Cesar",
-    urlFirstImg: "img/julio-cesar.jpg", 
-    urlSecondImg: "img/text_julius_cesar.jpg", 
+    img: "img/julio-cesar.jpg", 
+},
+{   
+    name: "Cesar",
+    img: "img/text_julius_cesar.jpg", 
     
-}, {
+}, 
+{
     name: "TheresaMay",
-    urlFirstImg: "img/theresa_may.jpg", 
-    urlSecondImg: "img/text_theresa_may.jpg", 
+    img: "img/theresa_may.jpg",
+},{
+ 
+    name: "TheresaMay",
+    img: "img/text_theresa_may.jpg", 
     
-}, {
-    name: "SherlySandberg",
-    urlFirstImg: "img/sherly_sandberg.jpg", 
-    urlSecondImg: "img/text_sherly_sandberg.jpg", 
+}, 
+{
+    name: "SherylSandberg",
+    img: "img/sherly_sandberg.jpg",
+},
+{ 
+    name: "SherylSandberg",
+    img: "img/text_sherly_sandberg.jpg", 
     
-}, {
+}, 
+{
     name: "Chopra",
-    urlFirstImg: "img/Chopra.jpg", 
-    urlSecondImg: "img/text_chopra.jpg", 
+    img: "img/Chopra.jpg",
+},
+{ 
+    name: "Chopra",
+    img: "img/text_chopra.jpg", 
     
-}, {
+}, 
+{
     name: "Andretti",
-    urlFirstImg: "img/andretti.jpg", 
-    urlSecondImg: "img/text_andretti.jpg",
+    img: "img/andretti.jpg", 
+},
+{
+    name: "Andretti",
+    img: "img/text_andretti.jpg",
     
-}, {
+}, 
+{
     name: "Jobs",
-    urlFirstImg: "img/jobs.png", 
-    urlSecondImg: "img/text_jobs.jpg", 
+    img: "img/jobs.png", 
+},
+{    
+    name: "Jobs",
+    img: "img/text_jobs.jpg", 
     
-}, {
+}, 
+{
     name: "Obama",
-    urlFirstImg: "img/obama.jpeg", 
-    urlSecondImg: "img/text_obama.png",
+    img: "img/obama.jpeg", 
+},
+{   
+    name: "Obama",
+    img: "img/text_obama.png",
    
-}, {
+},
+{
     name: "Macron",
-    urlFirstImg: "img/macron.jpg", 
-    urlSecondImg: "img/text_macron.png", 
+    img: "img/macron.jpg", 
+},
+{   
+    name: "Macron",
+    img: "img/text_macron.png", 
     
-}]
+}];
 
 cardsDb.forEach(function(element) {
 
     //cardsDb.front_face = "img/cbs.png";
     element.front_face = "img/cbs.png";
     
-})
+});
 
-console.log(cardsDb);
+const randomArray=[];
+
+
+
+console.log(typeof cardsDb);
