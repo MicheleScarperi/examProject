@@ -8,20 +8,23 @@
     margin-top: 50px;
 }
 
-.back-card{
+.back_card{
     position: relative;
     width: 94px;
     height: 94px;
     padding: 8px;
 
 }
+.img2{
+  visibility: hidden;
+}
 
-.back-card:active{
+.back_card:active{
     transform: scale(0.97);
     transition: transform .2s;
 }
 
-.back-card.flip {
+.back_card.flip {
     transform: rotateY(180deg);
 }
 

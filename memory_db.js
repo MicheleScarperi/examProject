@@ -164,9 +164,6 @@ cardsDb.forEach(function(element) {
 const randomArray=[];
 
 
-
-console.log(typeof cardsDb);
-
 function shuffle(cardsDb) {
     var currentIndex = cardsDb.length, temporaryValue, randomIndex;
   
