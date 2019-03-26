@@ -137,7 +137,7 @@ var cardsDb = [{
 }, 
 {
     name: "Obama",
-    img: "img/obama.jpeg", 
+    img: "img/barack.png", 
 },
 {   
     name: "Obama",
