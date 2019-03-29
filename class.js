@@ -13,13 +13,52 @@ function initializeGame() {
           container.insertAdjacentHTML('afterbegin', html); //this copies the html element and inserts it afterbegin, the copy is the html var
       })
   }
-  function flipCard(element){
+
+  var hasFlippedCard = false;
+var firstCard; 
+var secondCard;
+  
+function flipCard(element){
     if(counter === 2){
        return
     } 
     element.classList.toggle('flip');
     counter++;
-}      
+    // if it is false that hasFlippedCards is false
+    // hasFlippedCard is being set to true. And this is the first card.
+    if(!hasFlippedCard){
+      hasFlippedCard = true;
+      firstCard = this;
+      return;
+    }
+    secondCard = this;
+    hasFlippedCard = false;
+
+    checkForMatch();
+}   
+
+function checkForMatch() {
+  if(firstCard.dataset.attribute === secondCard.dataset.attribute){
+    disableCards();
+    return;
+  }
+  unflipCards();
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+}
+
+function unflipCards() {
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+  }, 1500)
+}
+
+card.forEach( card => card.addEventListener('click', flipCard))
 
 class card {
     constructor(name, img){
