@@ -1,17 +1,21 @@
 var cardsDb = [{
     name: "trump",
     img: "img/trump.jpg",
+    identifier: "trump1"
 },   
 {   name: "trump",
     img: "img/maga.jpg",
+    identifier: "trump2"
 }, 
 {
     name: "Merkel",
-    img: "img/angela.jpg", 
+    img: "img/angela.jpg",
+    identifier: "merkel1" 
 },    
 {    
     name: "Merkel",
     img: "img/cdu.jpg",
+    identifier: "merkel2"
 }, 
 {
     name: "Brian",
