@@ -1,15 +1,12 @@
 //this will only run, when the page is loaded.
 document.addEventListener('DOMContentLoaded', initializeGame, false);
 function initializeGame() {
-    //  var html = '' MARTEN
       cardsArray.forEach(function(cardInput){
-          
-      // html += cardInput.createHTML()
           
   
           var html = `<div onclick="flipCard(this)" class="back_card" data-attribute="${cardInput.name}">
-                          <img id="${cardInput.name}" class="img1" src="${cardInput.img}" style="height:110;width:110;opacity: 0.5;">
-                          <img class="img2" src="${cardInput.backimg}" style="height:110;width:110;">
+                          <img class="img1" src="${cardInput.img}">
+                          <img class="img2" src="${cardInput.backimg}">
                       </div>`;
   
           var container = document.getElementById('cards-wrapper')
@@ -18,7 +15,7 @@ function initializeGame() {
   }
   function flipCard(element){
     if(counter === 2){
-        return;
+       return
     } 
     element.classList.toggle('flip');
     counter++;
@@ -73,9 +70,11 @@ var macron2 = new card("macron", "img/text_macron.png")
 
 
 // This is our Database for the cards. 
-var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,messi,messi2,fyre,fyre2,coco,coco2,kanye,kanye2,
+var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,einstein2,messi,messi2,fyre,fyre2,coco,coco2,kanye,kanye2,
     tonyrobbins,tonyrobbins2,aristotle,aristotle2,cesar,cesar2,theresaMay,theresaMay2,sherylSandberg,sherylSandberg2,
     chopra,chopra2,andretti,andretti2,jobs,jobs2,obama,obama2,macron,macron2]
+
+console.log(cardsArray.length)
 
 // This is the section, that randomizes the memory cards on the board. 
 const randomArray=[];

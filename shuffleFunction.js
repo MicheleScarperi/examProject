@@ -56,4 +56,4 @@ function unFlipCards() {
 
         resetBoard();
     }, 1500)
-}
+} */

@@ -1,3 +1,5 @@
+
+
 #cards-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +9,7 @@
     margin-right: auto;
     margin-top: 50px;
 }
+
 
 .back_card{
     position: relative;
@@ -25,6 +28,10 @@
 .back_card.flip {
     transform: rotateY(180deg);
     transition: 0.9s;
+    position: relative;
+    width: 112px;
+    height: 112px;
+   padding: 8px;
 }
 
 .img1, .img2{
@@ -32,7 +39,7 @@
     backface-visibility: hidden;
     width: 112px;
     height: 112px;
-    padding: 8px;
+    border-radius: 5px;
 }
 
 .img1 {
