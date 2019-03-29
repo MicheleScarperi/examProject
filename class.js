@@ -19,31 +19,39 @@ var firstCard;
 var secondCard;
   
 function flipCard(element){
-    if(counter === 2){
+    if(counter === 3){
+       counter = 1;
        return
     } 
-    element.classList.toggle('flip');
-    counter++;
-    // if it is false that hasFlippedCards is false
-    // hasFlippedCard is being set to true. And this is the first card.
-    if(!hasFlippedCard){
-      hasFlippedCard = true;
-      firstCard = this;
-      return;
+    
+    if(counter === 1){
+      firstCard = element.dataset.attribute;
+      console.log('firstCard is this'+ firstCard);
+      element.classList.toggle('flip');
+      counter++;
+    } 
+    else if(counter === 2){
+      secondCard = element.dataset.attribute;
+      console.log('secondCard is this'+ secondCard);
+      element.classList.toggle('flip');
+      counter++;
+      
+      if(firstCard==secondCard){
+        console.log("match");
+      }
     }
-    secondCard = this;
-    hasFlippedCard = false;
 
-    checkForMatch();
+
+    //checkForMatch();
 }   
 
-function checkForMatch() {
+/*function checkForMatch() {
   if(firstCard.dataset.attribute === secondCard.dataset.attribute){
     disableCards();
     return;
   }
   unflipCards();
-}
+}*/
 
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
@@ -66,7 +74,7 @@ class card {
     this.backimg = "img/cbs.png";
 }}
 
-var counter = 0;
+var counter = 1;
 const cards = document.getElementsByClassName('back_card');
 //card.forEach( card => card.addEventListener('click', flipCard))
 
@@ -115,7 +123,7 @@ var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,einstein2,me
     tonyrobbins,tonyrobbins2,aristotle,aristotle2,cesar,cesar2,theresaMay,theresaMay2,sherylSandberg,sherylSandberg2,
     chopra,chopra2,andretti,andretti2,jobs,jobs2,obama,obama2,macron,macron2]
 
-    cardsArray[i].addEventListener('click', flipCard);
+    //cardsArray.addEventListener('click', flipCard);
 
 
 // This is the section, that randomizes the memory cards on the board. 
