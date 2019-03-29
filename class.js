@@ -32,7 +32,7 @@ class card {
 }}
 
 var counter = 0;
-const cards = document.getElementsByClassName('back_card');
+const cards = document.getElementsByClassName('card');
 
 var trump = new card("trump", "img/trump.jpg")
 var trump2 = new card("trump", "img/maga.jpg")
