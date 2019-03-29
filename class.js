@@ -72,8 +72,39 @@ var macron = new card("macron", "img/macron.jpg")
 var macron2 = new card("macron", "img/text_macron.png")
 
 
-
+// This is our Database for the cards. 
 var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,messi,messi2,fyre,fyre2,coco,coco2,kanye,kanye2,
     tonyrobbins,tonyrobbins2,aristotle,aristotle2,cesar,cesar2,theresaMay,theresaMay2,sherylSandberg,sherylSandberg2,
     chopra,chopra2,andretti,andretti2,jobs,jobs2,obama,obama2,macron,macron2]
+
+// This is the section, that randomizes the memory cards on the board. 
+const randomArray=[];
+
+
+function shuffle(cardsArray) {
+    var currentIndex = cardsArray.length;  
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = cardsArray[currentIndex];
+      cardsArray[currentIndex] = cardsArray[randomIndex];
+      cardsArray[randomIndex] = temporaryValue;
+    }
+  
+    return cardsArray;
+  }
+  
+  // Create a function to flip the picture on the game //
+  
+  // var cardsDb = cardsDb;
+  
+  // Shuffle cardsDb "elements"
+  
+  cardsArray = shuffle(cardsArray);
 
