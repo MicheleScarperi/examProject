@@ -67,8 +67,10 @@ class card {
 }}
 
 var counter = 0;
-const cards = document.getElementsByClassName('card');
-cards.forEach( card => card.addEventListener('click', flipCard))
+const cards = document.getElementsByClassName('back_card');
+//card.forEach( card => card.addEventListener('click', flipCard))
+
+ 
 
 var trump = new card("trump", "img/trump.jpg")
 var trump2 = new card("trump", "img/maga.jpg")
@@ -112,6 +114,8 @@ var macron2 = new card("macron", "img/text_macron.png")
 var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,einstein2,messi,messi2,fyre,fyre2,coco,coco2,kanye,kanye2,
     tonyrobbins,tonyrobbins2,aristotle,aristotle2,cesar,cesar2,theresaMay,theresaMay2,sherylSandberg,sherylSandberg2,
     chopra,chopra2,andretti,andretti2,jobs,jobs2,obama,obama2,macron,macron2]
+
+    cardsArray[i].addEventListener('click', flipCard);
 
 
 // This is the section, that randomizes the memory cards on the board. 
