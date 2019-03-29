@@ -14,7 +14,7 @@ function initializeGame() {
       })
   }
 
-  var hasFlippedCard = false;
+var hasFlippedCard = false;
 var firstCard; 
 var secondCard;
   
@@ -58,7 +58,6 @@ function unflipCards() {
   }, 1500)
 }
 
-card.forEach( card => card.addEventListener('click', flipCard))
 
 class card {
     constructor(name, img){
@@ -69,6 +68,7 @@ class card {
 
 var counter = 0;
 const cards = document.getElementsByClassName('card');
+cards.forEach( card => card.addEventListener('click', flipCard))
 
 var trump = new card("trump", "img/trump.jpg")
 var trump2 = new card("trump", "img/maga.jpg")
@@ -113,13 +113,12 @@ var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,einstein2,me
     tonyrobbins,tonyrobbins2,aristotle,aristotle2,cesar,cesar2,theresaMay,theresaMay2,sherylSandberg,sherylSandberg2,
     chopra,chopra2,andretti,andretti2,jobs,jobs2,obama,obama2,macron,macron2]
 
-console.log(cardsArray.length)
 
 // This is the section, that randomizes the memory cards on the board. 
 const randomArray=[];
 
 
-function shuffle(cardsArray) {
+/*function shuffle(cardsArray) {
     var currentIndex = cardsArray.length;  
   
     // While there remain elements to shuffle...
@@ -145,4 +144,4 @@ function shuffle(cardsArray) {
   // Shuffle cardsDb "elements"
   
   cardsArray = shuffle(cardsArray);
-
+*/
