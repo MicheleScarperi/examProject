@@ -8,7 +8,7 @@
     margin-top: 50px;
 }
 
-.back_card{
+.card{
     position: relative;
     width: 112px;
     height: 112px;
@@ -17,12 +17,12 @@
 }
 
 
-.back_card:active{
+.card:active{
     transform: scale(0.97);
     transition: transform .2s;
 }
 
-.back_card.flip {
+.card.flip {
     transform: rotateY(180deg);
     transition: 0.9s;
 }
