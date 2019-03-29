@@ -19,25 +19,31 @@ var firstCard;
 var secondCard;
   
 function flipCard(element){
-    if(counter === 3){
+    /*if(counter === 3){
        counter = 1;
+       console.log("reset counter" + counter);
        return
-    } 
+    } */
     
     if(counter === 1){
       firstCard = element.dataset.attribute;
       console.log('firstCard is this'+ firstCard);
       element.classList.toggle('flip');
       counter++;
+      console.log("counter is at firstCard: " + counter);
     } 
-    else if(counter === 2){
+    else if(counter === 2 || counter === 3){
       secondCard = element.dataset.attribute;
       console.log('secondCard is this'+ secondCard);
       element.classList.toggle('flip');
       counter++;
+      console.log("counter is with secondC:" + counter);
       
       if(firstCard==secondCard){
+        counter = 1;
         console.log("match");
+        //element.classList.remove('flip');
+        console.log("counter at match is=" + counter)
       }
     }
 
