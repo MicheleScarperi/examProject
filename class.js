@@ -133,33 +133,14 @@ var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,einstein2,me
 
 
 // This is the section, that randomizes the memory cards on the board. 
-const randomArray=[];
+// var randomArray = [];
+// randomArray.push(cardsArray)
+// console.log(randomArray);
+function shuffle() { 
+  cardsArray.sort(() => Math.random() - 0.5); 
+} 
+  shuffle();
 
 
-/*function shuffle(cardsArray) {
-    var currentIndex = cardsArray.length;  
-  
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = cardsArray[currentIndex];
-      cardsArray[currentIndex] = cardsArray[randomIndex];
-      cardsArray[randomIndex] = temporaryValue;
-    }
-  
-    return cardsArray;
-  }
-  
-  // Create a function to flip the picture on the game //
-  
-  // var cardsDb = cardsDb;
-  
-  // Shuffle cardsDb "elements"
-  
-  cardsArray = shuffle(cardsArray);
-*/
+
+
