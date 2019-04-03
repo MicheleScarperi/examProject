@@ -30,10 +30,12 @@ function flipCard(element) {
     if (!cardHasFlipped) {
         cardHasFlipped = true;
         firstCard = this; 
+        console.log(firstCard);
         return;
     }
     
     secondCard = this;
+    console.log(secondCard);
 
     checkForMatch();
 }
