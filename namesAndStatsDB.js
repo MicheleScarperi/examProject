@@ -24,6 +24,7 @@ submitBtnUI.onclick = function () {
     console.log(users);
     savePlayerNames();
     loadPlayerNames();
+    window.location.href = "./memory_board.html";
     
     /*// Doesn't work to check whether user/player already exists. Will always fire the alert on click.
     if(!name1 || name2 === users) {
