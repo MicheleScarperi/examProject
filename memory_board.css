@@ -17,6 +17,7 @@
     height: 112px;
     padding: 8px;
     transform-style: preserve-3d;
+    transition: .5s;
 }
 
 
