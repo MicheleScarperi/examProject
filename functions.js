@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', initializeGame, false);
+//document.addEventListener('DOMContentLoaded', initializeGame, false);
 
 //global variables.
 var cardHasFlipped = false;
@@ -22,7 +22,7 @@ function initializeGame() {
     console.log(cardsArray)
     }
 //This doesnt work, referencing problem (use cards array -simon).
-const cards = document.querySelectorAll('.back_card');
+const cards = document.querySelector('cards-wrapper');
 
 console.log(cards);
   
@@ -51,34 +51,37 @@ function flipCard(element) {
 
 
 //Adds an event listener to each card in html and fires the flipcard function onclick.
-cards.forEach(card => card.addEventListener('click', flipCard(this)));
+cards.forEach(card => card.addEventListener('click', flipCard))
 
  
 /* MATCHING LOGIC */
 
 //Make a function that checks for matches.
-// const checkForMatch = () => {
-//     if (firstCard.attribute === secondCard.attribute) {
-//         disableCards();
-//         console.log("match");
-//         return;
-//     }
-
-//     unflipCards();
-// }
-function checkForMatch(cardOne, cardTwo){
-    if(cardOne.name == cardTwo.name){
-        console.log(cardOne.html)
-        console.log("Match")
+const checkForMatch = () => {
+    if (firstCard.dataset.attribute === secondCard.dataset.attribute) {
+        disableCards();
+        console.log("match, cards have been disabled due to match.");
+        return;
+    } else { 
+    
+        unflipCards();
     }
 }
+// function checkForMatch(cardOne, cardTwo){
+//     if(cardOne.name == cardTwo.name){
+//         console.log(cardOne.html)
+//         console.log("Match")
+//     }
+// }
 
   //Make a function that disables matched cards. 
 const disableCards = () => {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    console.log("disableCards - cards are disabled now");
 
     resetBoard();
+    console.log("disableCards - Board has been reset");
 }
 
   //Make a function that unflips the cards if they were not a match.
@@ -92,6 +95,7 @@ const disableCards = () => {
 
           resetBoard();
       }, 1500);
+      console.log("cards have been unflipped");
   }
 
   //This function resets the card variables so that we can keep playing.
@@ -101,4 +105,5 @@ const disableCards = () => {
     lockBoard = false;
     firstCard = null;
     secondCard = null; 
+    console.log("board successfully reset")
   }
