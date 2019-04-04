@@ -60,4 +60,4 @@ var cardsArray = [trump,trump2,merkel,merkel2,brian,brian2,einstein,einstein2,me
 function shuffle() { 
   cardsArray.sort(() => Math.random() - 0.5); 
 } 
-  shuffle();
+shuffle();
