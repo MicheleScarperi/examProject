@@ -39,6 +39,7 @@ function flipCard() {
         secondCard = this;
         console.log("this is the second card" + secondCard.dataset.attribute);
         checkForMatch();
+        checkGameProgress();
     }
 //If it is a match, disable both cards (remove eventlisteners);
 }
@@ -100,3 +101,11 @@ const disableCards = () => {
     
     console.log("board successfully reset")
   }
+
+  const checkGameProgress = () => {
+      if (scoreCountP1 + scoreCountP2 == 18) {
+        alert('Congratulations, you guys finished the Game. ' + 'Scores are ' + 
+        'Player1: ' + scoreCountP1 + 'Player2: ' + scoreCountP2)
+      }
+  }
+  // Maybe replace player1 and player2 with their inserted names later. 
