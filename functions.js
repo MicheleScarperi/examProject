@@ -5,6 +5,8 @@ var cardHasFlipped = false;
 var firstCard;
 var secondCard; 
 var lockBoard = false;
+var scoreCountP1 = 0;
+var scoreCountP2 = 0;
 
 // This function creates our HTML, when our game starts.
 function initializeGame() {
@@ -49,6 +51,8 @@ cards.forEach(card => card.addEventListener('click', flipCard))
 //Make a function that checks for matches.
 const checkForMatch = () => {
     if (firstCard.dataset.attribute === secondCard.dataset.attribute) {
+        scoreCountP1 ++;
+        console.log(scoreCountP1); 
         disableCards();
         console.log("match, cards have been disabled due to match.");
        return;
