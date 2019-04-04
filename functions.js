@@ -1,4 +1,4 @@
-//document.addEventListener('DOMContentLoaded', initializeGame, false);
+document.addEventListener('DOMContentLoaded', initializeGame, false);
 
 //global variables.
 var cardHasFlipped = false;
@@ -22,7 +22,7 @@ function initializeGame() {
     console.log(cardsArray)
     }
 //This doesnt work, referencing problem (use cards array -simon).
-const cards = document.querySelector('cards-wrapper');
+const cards = document.querySelectorAll('cards-wrapper');
 
 console.log(cards);
   
@@ -40,10 +40,10 @@ function flipCard(element) {
         cardHasFlipped = true;
         //FIND OUT how to reference with this to one indi. card
         //Problem rn is that entire window is selected with this.
-        firstCard = this;
-        console.log(this);
+        // firstCard = this;
+        // console.log(this);
     } else {
-        secondCard = this;
+        //secondCard = this;
         console.log(secondCard);
         checkForMatch(firstCard, secondCard);
     }
@@ -51,6 +51,7 @@ function flipCard(element) {
 
 
 //Adds an event listener to each card in html and fires the flipcard function onclick.
+// GIVES AN ERROR cards is null.
 cards.forEach(card => card.addEventListener('click', flipCard))
 
  

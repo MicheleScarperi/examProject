@@ -3,9 +3,12 @@
 
 class card {
     constructor(name, img){
-    this.name = name;
+    this._name = name;
     this.img = img;
     this.backimg = "img/cbs.png";
+    }
+    get name() {
+        return this._name;
     }
 }
 
