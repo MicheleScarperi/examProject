@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', initializeGame, false);
+initializeGame();
 
 //global variables.
 var cardHasFlipped = false;
@@ -10,8 +10,8 @@ var lockBoard = false;
 function initializeGame() {
     cardsArray.forEach(function(cardInput){
         
-        
-        var html = `<div onclick="flipCard(this)" class="back_card" data-attribute="${cardInput.name}">
+        // onclick="flipCard(this)"
+        var html = `<div class="back_card" data-attribute="${cardInput.name}">
         <img class="img1" src="${cardInput.img}">
         <img class="img2" src="${cardInput.backimg}">
         </div>`;
@@ -19,69 +19,55 @@ function initializeGame() {
         var container = document.getElementById('cards-wrapper')
         container.insertAdjacentHTML('afterbegin', html); //this copies the html element and inserts it afterbegin, the copy is the html var
     })
-    console.log(cardsArray)
-    }
-//This doesnt work, referencing problem (use cards array -simon).
-const cards = document.querySelectorAll('cards-wrapper');
-
-console.log(cards);
-  
-//Function that adds a css class to the .back_card css class.
-//LockBoard basically prevents flipping before cards are matched or hidden.
-function flipCard(element) {
-    if (lockBoard) 
-    return; 
-    // if (this === firstCard)
-    // return;
-    
-    element.classList.add('flip');
-
-    if (!cardHasFlipped) {
-        cardHasFlipped = true;
-        //FIND OUT how to reference with this to one indi. card
-        //Problem rn is that entire window is selected with this.
-        // firstCard = this;
-        // console.log(this);
-    } else {
-        //secondCard = this;
-        console.log(secondCard);
-        checkForMatch(firstCard, secondCard);
-    }
 }
 
+const cards = document.querySelectorAll('.back_card');
+//Function that adds a css class to the .back_card css class.
+//LockBoard basically prevents flipping before cards are matched or hidden.
+
+function flipCard() {
+    
+    this.classList.add('flip');
+
+    if (!cardHasFlipped){
+        cardHasFlipped = true;
+        firstCard = this;
+        console.log("this is the first card" + firstCard.dataset.attribute);
+    } else {
+        secondCard = this;
+        console.log("this is the second card" + secondCard.dataset.attribute);
+        checkForMatch();
+    }
+//If it is a match, disable both cards (remove eventlisteners);
+}
 
 //Adds an event listener to each card in html and fires the flipcard function onclick.
-// GIVES AN ERROR cards is null.
 cards.forEach(card => card.addEventListener('click', flipCard))
 
- 
-/* MATCHING LOGIC */
+ /* MATCHING LOGIC */
 
 //Make a function that checks for matches.
 const checkForMatch = () => {
     if (firstCard.dataset.attribute === secondCard.dataset.attribute) {
         disableCards();
         console.log("match, cards have been disabled due to match.");
-        return;
-    } else { 
+       return;
+        } else { 
     
         unflipCards();
+        
+        }
     }
-}
-// function checkForMatch(cardOne, cardTwo){
-//     if(cardOne.name == cardTwo.name){
-//         console.log(cardOne.html)
-//         console.log("Match")
-//     }
-// }
-
-  //Make a function that disables matched cards. 
+//Make a function that disables matched cards. 
 const disableCards = () => {
+    
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    
     console.log("disableCards - cards are disabled now");
 
     resetBoard();
+    
     console.log("disableCards - Board has been reset");
 }
 
@@ -102,9 +88,11 @@ const disableCards = () => {
   //This function resets the card variables so that we can keep playing.
   //This function needs to be used by disbleCards and unflipCards.
   const resetBoard = () => {
+    
     cardHasFlipped = false;
     lockBoard = false;
     firstCard = null;
     secondCard = null; 
+    
     console.log("board successfully reset")
   }
