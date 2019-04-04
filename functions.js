@@ -6,7 +6,9 @@ var firstCard;
 var secondCard; 
 var lockBoard = false;
 var scoreCountP1 = 0;
+var missCountP1 = 0;
 var scoreCountP2 = 0;
+var missCountP2 = 0;
 
 // This function creates our HTML, when our game starts.
 function initializeGame() {
@@ -58,9 +60,9 @@ const checkForMatch = () => {
         console.log("match, cards have been disabled due to match.");
        return;
         } else { 
-    
+        missCountP1++;
         unflipCards();
-        
+        console.log("misscountp1= " + missCountP1);
         }
     }
 //Make a function that disables matched cards. 
