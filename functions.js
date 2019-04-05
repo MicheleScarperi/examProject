@@ -53,9 +53,7 @@ cards.forEach(card => card.addEventListener('click', flipCard))
 
 //Make a function that checks for matches.
 const checkForMatch = () => {
-    if (firstCard.dataset.attribute === secondCard.dataset.attribute) {
-        scoreCountP1 ++;
-        console.log(scoreCountP1); 
+    if (firstCard.dataset.attribute === secondCard.dataset.attribute) { 
         disableCards();
         console.log("match, cards have been disabled due to match.");
        return;
