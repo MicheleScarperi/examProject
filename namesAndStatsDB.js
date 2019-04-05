@@ -1,11 +1,16 @@
 // we will use local storage to safe players names and game results here. 
 
+//Henrik: change this class 
 class User {
     constructor(name1, name2){
         this.name1 = name1;
         this.name2 = name2; 
     }
 }
+
+//Henrik: game class, next turn var, p1 or p2 update on turns,
+
+
 // One hard coded user pair for testing purpose. 
 var users = [new User("Michele", "Lasse")];
 //console.log(users);
