@@ -10,10 +10,8 @@ class User {
 
 //Henrik: game class, next turn var, p1 or p2 update on turns,
 
+var users = [];
 
-// One hard coded user pair for testing purpose. 
-var users = [new User("Michele", "Lasse")];
-//console.log(users);
 
 const submitBtnUI = document.getElementById('submit-btn')
 const playerName1UI = document.getElementById('playerName1')
