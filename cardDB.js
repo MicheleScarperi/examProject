@@ -64,3 +64,5 @@ function shuffle() {
   cardsArray.sort(() => Math.random() - 0.5); 
 } 
 shuffle();
+
+//lets make this a method of the card class and call it on the card class with card.shuffle
