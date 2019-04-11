@@ -82,8 +82,17 @@ class Game {
         if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) { 
             this.disableCards();
             totalScore++;
+            if (totalCount % 2 == 0){
+                scoreCountP1++;
+            
+            console.log('this is the score of player 1 '+ scoreCountP1);}
             console.log("match, cards have been disabled due to match.");
             console.log("totalScore is: " + totalScore);
+            
+            if (totalCount % 2 !== 0){
+                scoreCountP2++
+                console.log('This is the score of player 2 '+scoreCountP2)
+            }
            return;
             } else { 
             // missCountP1++;
@@ -93,8 +102,8 @@ class Game {
             console.log("totalMisscount is: " + totalMiss);
             }
             totalCount = totalScore + totalMiss;
-            this.determinePoints();
-        }
+            }
+            //this.determinePoints();
 
     disableCards() {
 
@@ -140,17 +149,15 @@ class Game {
         }
     }
 
-    determinePoints() {
-        if (totalCount % 2 == 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
-        scoreCountP1++;
-          totalScore++;
-          console.log("determinePoints for player 1 is: " + scoreCountP1)
-        } else if (totalCount % 2 !== 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
-          scoreCountP2++;
-          totalScore++;
-          console.log("determinePoints for player 2 is: " + scoreCountP2)
-        }
+    // determinePoints() {
+    //     if (totalCount === 3) {
+    //     scoreCountP1++;
+    //       console.log("determinePoints for player 1 is: " + scoreCountP1)
+    //     } else if (totalCount % 2 !== 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
+    //       scoreCountP2++;
+    //       console.log("determinePoints for player 2 is: " + scoreCountP2)
+    //     }
         
-      }
+    //   }
 
 }
