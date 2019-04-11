@@ -148,11 +148,11 @@ class Game {
         'Player1: ' + scoreCountP1 + 'Player2: ' + scoreCountP2)
         }
     }
-
     makeScoreVisInHtml() {
         var p1Score = scoreCountP1;
-        // var p2Score = scoreCountP2;
-        document.getElementById('scoreboard').innerHTML = p1Score;
+        var p2Score = scoreCountP2;
+        document.getElementById('P1Html').innerHTML = p1Score;
+        document.getElementById('P2Html').innerHTML = p2Score;
     }
 
     // determinePoints() {
