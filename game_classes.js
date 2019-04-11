@@ -92,6 +92,8 @@ class Game {
             // console.log("misscountp1= " + missCountP1);
             console.log("totalMisscount is: " + totalMiss);
             }
+            this.determinePoints();
+            
         }
 
     disableCards() {
@@ -137,5 +139,18 @@ class Game {
         'Player1: ' + scoreCountP1 + 'Player2: ' + scoreCountP2)
         }
     }
+
+    determinePoints() {
+        if (totalCount % 2 == 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
+          scoreCountP1++;
+          totalScore++;
+          console.log("determinePoints for player 1 is: " + scoreCountP1)
+        } else if (totalCount % 2 !== 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
+          scoreCountP2++;
+          totalScore++;
+          console.log("determinePoints for player 2 is: " + scoreCountP2)
+        }
+        
+      }
 
 }

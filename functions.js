@@ -11,6 +11,7 @@ var scoreCountP2 = 0;
 var missCountP2 = 0;
 var totalScore = 0;
 var totalMiss = 0;
+var totalCount = 10;
 
 
 game.initializeGame();
@@ -24,6 +25,8 @@ const cards = document.querySelectorAll('.back_card');
 cards.forEach(card => card.addEventListener('click', function(event){
     game.flipCard(event);
 }));
+
+
 
  /* MATCHING LOGIC */
 
