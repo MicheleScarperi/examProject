@@ -92,8 +92,8 @@ class Game {
             // console.log("misscountp1= " + missCountP1);
             console.log("totalMisscount is: " + totalMiss);
             }
+            totalCount = totalScore + totalMiss;
             this.determinePoints();
-            
         }
 
     disableCards() {
@@ -142,7 +142,7 @@ class Game {
 
     determinePoints() {
         if (totalCount % 2 == 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
-          scoreCountP1++;
+        scoreCountP1++;
           totalScore++;
           console.log("determinePoints for player 1 is: " + scoreCountP1)
         } else if (totalCount % 2 !== 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
