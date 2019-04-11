@@ -83,11 +83,14 @@ class Game {
             this.disableCards();
             totalScore++;
             console.log("match, cards have been disabled due to match.");
+            console.log("totalScore is: " + totalScore);
            return;
             } else { 
-            missCountP1++;
+            // missCountP1++;
+            totalMiss++;
             this.unflipCards();
-            console.log("misscountp1= " + missCountP1);
+            // console.log("misscountp1= " + missCountP1);
+            console.log("totalMisscount is: " + totalMiss);
             }
         }
 
