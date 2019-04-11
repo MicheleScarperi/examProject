@@ -13,6 +13,12 @@ var totalMiss = 0;
 var totalScore = 0;
 var totalCount = 0;
 
+window.onload = function() {
+  var p1Score = scoreCountP1;
+  var p2Score = scoreCountP2;
+
+  document.getElementById('scoreboard').innerHTML = p1Score, p2Score;
+};
 
 game.initializeGame();
 
