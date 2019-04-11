@@ -149,6 +149,12 @@ class Game {
         }
     }
 
+    makeScoreVisInHtml() {
+        var p1Score = scoreCountP1;
+        // var p2Score = scoreCountP2;
+        document.getElementById('scoreboard').innerHTML = p1Score;
+    }
+
     // determinePoints() {
     //     if (totalCount === 3) {
     //     scoreCountP1++;
