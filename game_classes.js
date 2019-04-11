@@ -81,6 +81,7 @@ class Game {
     checkForMatch() {
         if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) { 
             this.disableCards();
+            totalScore++;
             console.log("match, cards have been disabled due to match.");
            return;
             } else { 
