@@ -74,6 +74,7 @@ class Game {
             console.log("this is the second card" + secondCard.parentElement.dataset.attribute);
             this.checkForMatch();
             this.checkGameProgress();
+            this.makeScoreVisInHtml();
         }
     //If it is a match, disable both cards (remove eventlisteners);
     }
