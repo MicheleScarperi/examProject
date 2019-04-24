@@ -34,11 +34,11 @@ class Game {
         if (!cardHasFlipped){
             cardHasFlipped = true;
             firstCard = _this;
-            console.log(firstCard);
-            console.log("this is the first card" + firstCard.parentElement.dataset.attribute);
+            //console.log(firstCard);
+            //console.log("this is the first card" + firstCard.parentElement.dataset.attribute);
         } else {
             secondCard = _this;
-            console.log("this is the second card" + secondCard.parentElement.dataset.attribute);
+            //console.log("this is the second card" + secondCard.parentElement.dataset.attribute);
             this.checkForMatch();
             this.checkGameProgress();
             this.makeScoreVisInHtml();
@@ -50,11 +50,14 @@ class Game {
         if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) { 
             this.disableCards();
             totalScore++;
+            totalCount = totalScore + totalMiss;
+            console.log(totalCount);
+        
             if (totalCount % 2 == 0){
                 scoreCountP1++;
             
             console.log('this is the score of player 1 '+ scoreCountP1);}
-            console.log("match, cards have been disabled due to match.");
+            //console.log("match, cards have been disabled due to match.");
             console.log("totalScore is: " + totalScore);
             
             if (totalCount % 2 !== 0){
@@ -70,6 +73,7 @@ class Game {
             console.log("totalMisscount is: " + totalMiss);
             }
             totalCount = totalScore + totalMiss;
+            console.log('This is the total count: '+ totalCount);
             }
             //this.determinePoints();
 
@@ -78,11 +82,11 @@ class Game {
         firstCard.parentElement.removeEventListener('click', this.flipCard);
         secondCard.parentElement.removeEventListener('click', this.flipCard);
         
-        console.log("disableCards - cards are disabled now");
+        //console.log("disableCards - cards are disabled now");
     
         this.resetBoard();
         
-        console.log("disableCards - Board has been reset");
+        //console.log("disableCards - Board has been reset");
     }
         
     unflipCards() {
@@ -95,7 +99,7 @@ class Game {
     
                 this.resetBoard();
             }, 1500);
-            console.log("cards have been unflipped");
+            //console.log("cards have been unflipped");
         }
 
 //This function resets the card variables so that we can keep playing.
@@ -107,7 +111,7 @@ class Game {
     firstCard = null;
     secondCard = null; 
     
-    console.log("board successfully reset")
+    //console.log("board successfully reset")
     }
 
     checkGameProgress() {
