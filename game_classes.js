@@ -25,6 +25,7 @@ class Game {
             container.insertAdjacentHTML('afterbegin', html); //this copies the html element and inserts it afterbegin, the copy is the html var
         });
         
+        //This makes the inserted Player names visible on the Game Board. 
         var playersNames = JSON.parse(localStorage.getItem("player"));
         document.getElementById('playerName1').innerHTML = playersNames[0].playerName;
         document.getElementById('playerName2').innerHTML = playersNames[1].playerName;
