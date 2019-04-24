@@ -3,9 +3,9 @@
 // Connect indiScore to statsP1 and statsP2 from game class at some point. 
 class Player {
     constructor(playerName,indiScore, indiMiss){
-        this._playerName = playerName;
-        this._indiScore = indiScore; // individual Score
-        this._indiMiss = indiMiss; // individual missmatches
+        this.playerName = playerName;
+        this.indiScore = indiScore; // individual Score
+        this.indiMiss = indiMiss; // individual missmatches
 
     }
 }

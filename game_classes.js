@@ -24,6 +24,10 @@ class Game {
             var container = document.getElementById('cards-wrapper')
             container.insertAdjacentHTML('afterbegin', html); //this copies the html element and inserts it afterbegin, the copy is the html var
         });
+        
+        var playersNames = JSON.parse(localStorage.getItem("player"));
+        document.getElementById('playerName1').innerHTML = playersNames[0].playerName;
+        document.getElementById('playerName2').innerHTML = playersNames[1].playerName;
     }
 
     flipCard(event) {
@@ -123,9 +127,6 @@ class Game {
         //var p2Miss = missCountP2;
         document.getElementById('P1Html').innerHTML = p1Score;
         document.getElementById('P2Html').innerHTML = p2Score;
-
-        document.getElementById('playerName1').innerHTML = playerName;
-        document.getElementById('playerName2').innerHTML = playerName;
         //document.getElementById('P1Miss').innerHTML = p1Miss;
         //document.getElementById('P2Miss').innerHTML = p2Miss;
     }
