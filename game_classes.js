@@ -96,7 +96,7 @@ class Game {
             }
            return;
             } else { 
-            // missCountP1++;
+            //missCountP1++;
             totalMiss++;
             this.unflipCards();
             // console.log("misscountp1= " + missCountP1);
@@ -152,8 +152,12 @@ class Game {
     makeScoreVisInHtml() {
         var p1Score = scoreCountP1;
         var p2Score = scoreCountP2;
+        //var p1Miss = missCountP1;
+        //var p2Miss = missCountP2;
         document.getElementById('P1Html').innerHTML = p1Score;
         document.getElementById('P2Html').innerHTML = p2Score;
+        //document.getElementById('P1Miss').innerHTML = p1Miss;
+        //document.getElementById('P2Miss').innerHTML = p2Miss;
     }
 
     // determinePoints() {
