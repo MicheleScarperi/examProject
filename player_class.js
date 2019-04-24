@@ -32,7 +32,7 @@ submitBtnUI.onclick = function () {
     var playerName = playerName1UI.value;
     //var name2 = playerName2UI.value;
     
-    players.push(new Player(playerName, indiScore, indiMiss));
+    players.push(new Player(playerName));
     console.log(players);
     savePlayerNames();
     loadPlayerNames();
@@ -45,7 +45,7 @@ submitBtnUI2.onclick = function () {
     var playerName = playerName2UI.value;
     //var name2 = playerName2UI.value;
     
-    players.push(new Player(playerName, indiScore, indiMiss));
+    players.push(new Player(playerName));
     console.log(players);
     savePlayerNames();
     loadPlayerNames();
