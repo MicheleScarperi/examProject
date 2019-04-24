@@ -54,15 +54,22 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
-#scoreP1, #scoreP2{
+#scoreP1{
     padding: 20px;
     margin: 25px;
-    background-color:skyblue;
-    border: solid 2px slategray;
+    background-color: lightcyan;
+    border-radius: 5px;
 }
 #P1Html, #P2Html{
     text-align: center;
 }
 #P1miss, #P2miss{
     text-align: center;
+}
+
+#scoreP2{
+    padding: 20px;
+    margin: 25px;
+    background-color: lightcyan;
+    border-radius: 8px;
 }
