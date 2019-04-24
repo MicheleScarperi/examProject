@@ -1,36 +1,3 @@
-// class User {
-//     constructor(firstName, lastName, userName, password, organisation){
-//         this.firstName = firstName;
-//         this.lastName = lastName
-//         this.userName = userName;
-//         this.password = password;
-//         this.organisation = organisation;
-//     }
-// }
-
-//Henrik: game class, next turn var, p1 or p2 update on turns,
-// class Player {
-//     constructor(playerName,indiScore, indiMiss, turn){
-//         this._playerName = playerName;
-//         this._indiScore = indiScore; // individual Score
-//         this._indiMiss = indiMiss; // individual missmatches
-//         this._turn = turn;
-    
-//     } get individualScore() {
-//         return this._indiScore;
-    
-//     } get individualMiss() {
-//         return this._indiMiss;
-    
-//     } get turn() {
-//         return this._turn;
-
-//     } get playerName() {
-//         return this._playerName;
-
-//     }
-// }
-
 class Game {
     constructor(winner,totalGameTime, totalTurns,totalMiss, statsP1, statsP2){
         this._winner = winner;
@@ -159,16 +126,5 @@ class Game {
         //document.getElementById('P1Miss').innerHTML = p1Miss;
         //document.getElementById('P2Miss').innerHTML = p2Miss;
     }
-
-    // determinePoints() {
-    //     if (totalCount === 3) {
-    //     scoreCountP1++;
-    //       console.log("determinePoints for player 1 is: " + scoreCountP1)
-    //     } else if (totalCount % 2 !== 0 && firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
-    //       scoreCountP2++;
-    //       console.log("determinePoints for player 2 is: " + scoreCountP2)
-    //     }
-        
-    //   }
 
 }
