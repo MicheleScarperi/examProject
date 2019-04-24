@@ -123,6 +123,9 @@ class Game {
         //var p2Miss = missCountP2;
         document.getElementById('P1Html').innerHTML = p1Score;
         document.getElementById('P2Html').innerHTML = p2Score;
+
+        document.getElementById('playerName1').innerHTML = playerName;
+        document.getElementById('playerName2').innerHTML = playerName;
         //document.getElementById('P1Miss').innerHTML = p1Miss;
         //document.getElementById('P2Miss').innerHTML = p2Miss;
     }
