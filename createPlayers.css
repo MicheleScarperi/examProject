@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gainsboro;
+}
+
+#playerName1, #playerName2, #submit-btn{
+    padding: 5px;
+    margin: 8px;
+    font-size: 18px;
+}
+
+#playerName1, #playerName2{
+    border-radius: 3px;
+
+}
+#submit-btn{
+    width: 200px;
+    margin-top: 25px;
+    font-size: 20px;
+}
