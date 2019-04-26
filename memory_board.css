@@ -57,7 +57,7 @@
 #scoreP1{
     padding: 20px;
     margin: 25px;
-    background-color: lightcyan;
+    background-color: rgb(192, 143, 143);
     border-radius: 5px;
 }
 #P1Html, #P2Html{
@@ -70,6 +70,6 @@
 #scoreP2{
     padding: 20px;
     margin: 25px;
-    background-color: lightcyan;
+    background-color: rgb(192, 143, 143);
     border-radius: 8px;
 }
