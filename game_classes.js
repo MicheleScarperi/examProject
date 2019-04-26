@@ -33,16 +33,16 @@ class Game {
 
     flipCard(event) {
         var _this = event.target;
-        console.log(_this);
+        //console.log(_this.parentElement.dataset.attribute);
         console.log(firstCard)
         console.log(_this == firstCard, _this === firstCard)
         if (!firstCard){
             cardHasFlipped = true;
             firstCard = _this;
             _this.parentElement.classList.add('flip');
-            //console.log(firstCard);
+            console.log(_this.parentElement.dataset.attribute);
             //console.log("this is the first card" + firstCard.parentElement.dataset.attribute);
-        } else if (!secondCard && _this!==firstCard) {
+        } else if (!secondCard && firstCard.parentElement.dataset.id !== _this.parentElement.dataset.id) {
             secondCard = _this;
             _this.parentElement.classList.add('flip');
             //console.log("this is the second card" + secondCard.parentElement.dataset.attribute);
@@ -54,7 +54,7 @@ class Game {
     }
 
     checkForMatch() {
-        if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) { 
+        if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute  ) { 
             this.disableCards();
             totalScore++;
             totalCount = totalScore + totalMiss;
