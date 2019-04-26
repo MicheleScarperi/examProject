@@ -33,23 +33,28 @@ submitBtnUI.onclick = function () {
     //var name2 = playerName2UI.value;
     
     players.push(new Player(playerName));
-    console.log(players);
-    savePlayerNames();
-    loadPlayerNames();
 
-}
-
-submitBtnUI2.onclick = function () {
-
-    // console.log('clicked')
-    var playerName = playerName2UI.value;
+    playerName = playerName2UI.value;
     //var name2 = playerName2UI.value;
     
     players.push(new Player(playerName));
     console.log(players);
     savePlayerNames();
     loadPlayerNames();
-    window.location.href = "./memory_board.html";
 
 }
+
+// submitBtnUI2.onclick = function () {
+
+//     // console.log('clicked')
+//     var playerName = playerName2UI.value;
+//     //var name2 = playerName2UI.value;
+    
+//     players.push(new Player(playerName));
+//     console.log(players);
+//     savePlayerNames();
+//     loadPlayerNames();
+//     window.location.href = "./memory_board.html";
+
+// }
 
