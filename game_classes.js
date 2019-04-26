@@ -140,3 +140,5 @@ class Game {
     }
 
 }
+
+console.log('This is scoreCountP1 ' + scoreCountP1);

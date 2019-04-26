@@ -59,3 +59,7 @@ submitBtnUI.onclick = function () {
 
 // }
 
+// players.indiScore = scoreCountP1
+console.log("This is scoreCountP1 in player_class.js " + scoreCountP1)
+console.log("players indiScore is: " + players.indiScore)
+// playerName1UI.value 

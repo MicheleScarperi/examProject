@@ -24,3 +24,5 @@ const cards = document.querySelectorAll('.back_card');
 cards.forEach(card => card.addEventListener('click', function(event){
     game.flipCard(event);
 }));
+
+console.log('This is scoreCountP1 in functions.js ' + scoreCountP1)
