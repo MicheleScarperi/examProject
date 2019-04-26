@@ -123,7 +123,7 @@ class Game {
         var playersNames = JSON.parse(localStorage.getItem("player"));
         if (scoreCountP1 + scoreCountP2 == 18) {
         alert('Congratulations, you guys finished the Game. ' + 'Scores are: ' + playersNames[0].playerName + " "
-         + scoreCountP1 + " and " + playersNames[1].playerName + " " + scoreCountP2 + ".")
+         + scoreCountP1 + ", " + playersNames[1].playerName + " " + scoreCountP2 + ".")
         }
     }
     makeScoreVisInHtml() {
