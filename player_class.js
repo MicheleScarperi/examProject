@@ -22,7 +22,7 @@ const loadPlayerNames = () => {
 }
 
 const submitBtnUI = document.getElementById('submit-btn')
-const submitBtnUI2 = document.getElementById('submit-btn2')
+// const submitBtnUI2 = document.getElementById('submit-btn2')
 const playerName1UI = document.getElementById('playerName1')
 const playerName2UI = document.getElementById('playerName2')
 
@@ -41,6 +41,7 @@ submitBtnUI.onclick = function () {
     console.log(players);
     savePlayerNames();
     loadPlayerNames();
+    window.location.href = "./memory_board.html";
 
 }
 
