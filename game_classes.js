@@ -16,7 +16,7 @@ class Game {
         cardsArray.forEach(function(cardInput){
             
             // onclick="flipCard(this)"
-            var html = `<div class="back_card" data-attribute="${cardInput.name}">
+            var html = `<div class="back_card" data-id="Math.random()" data-attribute="${cardInput.name}">
             <img class="img1" src="${cardInput.img}">
             <img class="img2" src="${cardInput.backimg}">
             </div>`;
@@ -33,16 +33,18 @@ class Game {
 
     flipCard(event) {
         var _this = event.target;
-
-        _this.parentElement.classList.add('flip');
-    
-        if (!cardHasFlipped){
+        console.log(_this);
+        console.log(firstCard)
+        console.log(_this == firstCard, _this === firstCard)
+        if (!firstCard){
             cardHasFlipped = true;
             firstCard = _this;
+            _this.parentElement.classList.add('flip');
             //console.log(firstCard);
             //console.log("this is the first card" + firstCard.parentElement.dataset.attribute);
-        } else {
+        } else if (!secondCard && _this!==firstCard) {
             secondCard = _this;
+            _this.parentElement.classList.add('flip');
             //console.log("this is the second card" + secondCard.parentElement.dataset.attribute);
             this.checkForMatch();
             this.checkGameProgress();
