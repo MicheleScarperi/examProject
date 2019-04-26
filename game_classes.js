@@ -16,7 +16,7 @@ class Game {
         cardsArray.forEach(function(cardInput){
             
             // onclick="flipCard(this)"
-            var html = `<div class="back_card" data-id="Math.random()" data-attribute="${cardInput.name}">
+            var html = `<div class="back_card" data-id="${Math.random()}" data-attribute="${cardInput.name}">
             <img class="img1" src="${cardInput.img}">
             <img class="img2" src="${cardInput.backimg}">
             </div>`;
