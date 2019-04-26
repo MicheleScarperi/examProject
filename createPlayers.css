@@ -4,7 +4,7 @@ body{
     align-items: center;
     margin-top: 15%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: gainsboro;
+    background-image: url(img/backgroundimg.jpg);
 }
 
 #playerName1, #playerName2, #submit-btn{
