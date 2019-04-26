@@ -1,17 +1,6 @@
 var game = new Game();
 
-//global variables.
-var cardHasFlipped = false;
-var firstCard;
-var secondCard; 
-var lockBoard = false;
-var scoreCountP1 = 0;
-var missCountP1 = 0;
-var scoreCountP2 = 0;
-var missCountP2 = 0;
-var totalMiss = 0;
-var totalScore = 0;
-var totalCount = 0;
+
 
 game.initializeGame();
 
