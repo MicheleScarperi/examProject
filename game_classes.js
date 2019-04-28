@@ -123,7 +123,7 @@ class Game {
         }
 
 //This function resets the card variables so that we can keep playing.
-//This function needs to be used by disbleCards and unflipCards.
+
     resetBoard() {
     
     cardHasFlipped = false;
@@ -140,6 +140,7 @@ class Game {
         alert('Congratulations, you guys finished the Game. ' + 'Scores are: ' + playersNames[0].playerName + " "
          + scoreCountP1 + ", " + playersNames[1].playerName + " " + scoreCountP2 + ".")
         }
+        // Player.setIndiPlayerScore() how can we call this from the other class here?
     }
     makeScoreVisInHtml() {
         var p1Score = scoreCountP1;
@@ -153,5 +154,3 @@ class Game {
     }
 
 }
-
-console.log('This is scoreCountP1 ' + scoreCountP1);

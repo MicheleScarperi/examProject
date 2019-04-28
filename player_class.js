@@ -8,7 +8,13 @@ class Player {
         this.indiMiss = indiMiss; // individual missmatches
 
     }
-}
+    // setPlayerScore() {
+    //     firstPlayer.indiScore = scoreCountP1
+    //     secondPlayer.indiScore = scoreCountP2
+    // }
+} 
+// Player.setPlayerScore();
+// console.log(Player.setPlayerScore + "this is the setPlayerScore in the player_class method.");
 
 var players = [];
 
@@ -22,62 +28,35 @@ const loadPlayerNames = () => {
 }
 
 const submitBtnUI = document.getElementById('submit-btn')
-// const submitBtnUI2 = document.getElementById('submit-btn2')
 const playerName1UI = document.getElementById('playerName1')
 const playerName2UI = document.getElementById('playerName2')
 
+//On click, safe players inserted names and push them to the players array + safe to localStorage.
 submitBtnUI.onclick = function () {
 
-    // console.log('clicked')
     var playerName = playerName1UI.value;
-    //var name2 = playerName2UI.value;
-    var firstPlayer = new Player(playerName1UI.value);
-    indiScore = 2000;
-    scoreCountP1 = 10;
-    firstPlayer.indiScore = scoreCountP1;
     
-    players.push(new Player(playerName, indiScore));
+    var firstPlayer = new Player(playerName1UI.value);
+    console.log(firstPlayer)
+    // indiScore = 2000;
+    // scoreCountP1 = 10;
+    // firstPlayer.indiScore = scoreCountP1;
+    
+    players.push(new Player(playerName, 1000, 1000));
 
     playerName = playerName2UI.value;
     //var name2 = playerName2UI.value;
     var secondPlayer = new Player(playerName2UI.value);
-    indiScore = 200000;
-    scoreCountP2 = 20;
-    secondPlayer.indiScore = scoreCountP2;
+    // indiScore = 200000;
+    // scoreCountP2 = 20;
+    // secondPlayer.indiScore = scoreCountP2;
+  
     
-    players.push(new Player(playerName, indiScore));
-    console.log(players);
+    players.push(new Player(playerName, 2000, 2000));
+    
     savePlayerNames();
     loadPlayerNames();
-    
-    
-
-    console.log('this is firstPLayers indiScore ' + firstPlayer.indiScore);
     
 window.location.href = "./memory_board.html";
 }
 
-// submitBtnUI2.onclick = function () {
-
-//     // console.log('clicked')
-//     var playerName = playerName2UI.value;
-//     //var name2 = playerName2UI.value;
-    
-//     players.push(new Player(playerName));
-//     console.log(players);
-//     savePlayerNames();
-//     loadPlayerNames();
-//     window.location.href = "./memory_board.html";
-
-// }
-
-// players.indiScore = scoreCountP1
-
-// playerName1UI.value 
-
-// const test = () => {
-// console.log("This is scoreCountP1 in player_class.js " + scoreCountP1)
-// console.log("players indiScore is: " + players.indiScore)
-
-// }
-// test();
