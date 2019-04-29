@@ -17,7 +17,7 @@ class Player {
 // console.log(Player.setPlayerScore + "this is the setPlayerScore in the player_class method.");
 
 var players = [];
-
+//Access this array within the game class and then to the player class. 
 // Safes player names to local Storage. 
 const savePlayerNames = () => {
     localStorage.setItem('player', JSON.stringify(players))
