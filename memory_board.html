@@ -8,26 +8,43 @@
     <title>Game Board - Learnorize</title>
 
 </head>
-<body>
-    <container class="scores">
-        <div id="scoreP1">
-            <h2 id= "playerName1"></h2>
-                <h3>Points</h3>
-                    <h4 id="P1Html">0</h4>
-        </div>
-        <div id="scoreP2">
-            <h2 id= "playerName2"></h2>
-                    <h3>Points</h3>
-                        <h4 id="P2Html">0</h4>
-        </div>
-    </container>
-    <div id="board">
-        
-        <section id="cards-wrapper"></section>
+<body style="background-color:gainsboro">
+        <container class="scores">
+                <div id="scoreP1">
+                    <h2 id= "playerName1"></h2>
+                        <h3><center>Points</center></h3>
+                                <h4 id="P1Html"> 0</h4>
+                        <!-- <h3>Misses</h3>
+                                <h4 id="P1Miss">0 </h4> -->
+                    </div>
+                <div id="scoreP2">
+                        <h2 id= "playerName2"></h2>
+                            <h3><center>Points</center></h3>
+                                 <h4 id="P2Html"> 0</h4>
+                            <!-- <h3> Misses</h3>
+                                <h4 id="P2Miss"> 0</h4> -->
+                </div>
+            </container>
+        <!-- <div>
+                <p> <h1 style="text-align: center">Learnorize</h1> </p> </div>
+                <div>
+                <p id=p1Score style="text-align: center">
+                Player 1 Score: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Player 2 Score:
+            </p> </div> -->
 
-        <script src="./cardDB.js"></script>
-        <script src="./game_classes.js"></script>
-        <script src="./functions.js"></script>
-    </div>
+            
+<div id="board">
+<section id="cards-wrapper"></section>
+<script src="./cardDB.js"></script>
+<script src="./game_classes.js"></script>
+<script src="./functions.js"></script>
+<body>
+
+     <!-- <p style="text-align: center">Player 1 Score &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Player 2 Score </p>
+    <p style="text-align:center" id="P1Html"></p>
+    <p style="text-align:center" id="P2Html"></p>
+    </body> -->
+
+</div>
 </body>
 </html>
