@@ -7,6 +7,7 @@ class card {
     this.img = img;
     this.backimg = "img/cbs.png";
     }
+    //Program doesnt work without the getter function below, but we don't know why!
     get name() {
         return this._name;
     }
