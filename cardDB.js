@@ -7,9 +7,6 @@ class card {
     this.img = img;
     this.backimg = "img/cbs.png";
     }
-    get name() {
-        return this._name;
-    }
 }
 
 var trump = new card("trump", "img/trump.jpg")
@@ -55,11 +52,8 @@ var cardsArray = [trump,trump2,netflix,netflix2,brian,brian2,einstein,einstein2,
     ebay,ebay2,alibaba, alibaba2,facebook,facebook2,amazon,amazon2,adobe,adobe2, mastercard,
     mastercard2,samsung,samsung2,jobs,jobs2,obama,obama2,intel,intel2]
 
-   
-
 
 // This is the section, that randomizes the memory cards on the board. 
-
 function shuffle() { 
   cardsArray.sort(() => Math.random() - 0.5); 
 } 

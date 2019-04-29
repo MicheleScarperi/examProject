@@ -1,5 +1,7 @@
 
-
+body{
+    background-color: gainsboro;
+}
 #cards-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +13,6 @@
     perspective: 1000px;
 }
 
-
 .back_card{
     position: relative;
     width: 112px;
@@ -21,7 +22,6 @@
     transition: .5s;
 }
 
-
 .back_card:active{
     transform: scale(0.97);
     transition: transform .2s;
@@ -29,11 +29,6 @@
 
 .back_card.flip {
     transform: rotateY(180deg);
-    /* transition: 0.9s;
-    position: relative;
-    width: 112px;
-    height: 112px;
-   padding: 8px; */
 }
 
 .img1, .img2{
@@ -54,22 +49,26 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
-#scoreP1{
-    padding: 20px;
-    margin: 25px;
-    background-color: rgb(192, 143, 143);
-    border-radius: 5px;
-}
+
 #P1Html, #P2Html{
     text-align: center;
 }
+
 #P1miss, #P2miss{
     text-align: center;
 }
 
-#scoreP2{
+#scoreP2, #scoreP1{
     padding: 20px;
     margin: 25px;
     background-color: rgb(192, 143, 143);
     border-radius: 8px;
+}
+
+h3{
+    text-align: center;
+}
+
+#playerName1, #playerName2{
+    text-align: center;
 }
