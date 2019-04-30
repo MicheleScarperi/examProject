@@ -42,17 +42,18 @@ submitBtnUI.onclick = function () {
     // scoreCountP1 = 10;
     // firstPlayer.indiScore = scoreCountP1;
     
-    players.push(new Player(playerName, 1000, 1000));
+    players.push(new Player(playerName, 0, 0));
 
     playerName = playerName2UI.value;
     //var name2 = playerName2UI.value;
     var secondPlayer = new Player(playerName2UI.value);
+    console.log(secondPlayer);
     // indiScore = 200000;
     // scoreCountP2 = 20;
     // secondPlayer.indiScore = scoreCountP2;
   
     
-    players.push(new Player(playerName, 2000, 2000));
+    players.push(new Player(playerName, 0, 0));
     
     savePlayerNames();
     loadPlayerNames();

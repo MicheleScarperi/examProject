@@ -42,6 +42,9 @@ class Game {
         var playersNames = JSON.parse(localStorage.getItem("player"));
         document.getElementById('playerName1').innerHTML = playersNames[0].playerName;
         document.getElementById('playerName2').innerHTML = playersNames[1].playerName;
+        
+        console.log('This is the safed player 1 score: ' + playersNames[0].indiScore)
+        
     }
 
     flipCard(event) {
@@ -140,6 +143,13 @@ class Game {
         alert('Congratulations, you guys finished the Game. ' + 'Scores are: ' + playersNames[0].playerName + " "
          + scoreCountP1 + ", " + playersNames[1].playerName + " " + scoreCountP2 + ".")
         }
+        //Simply update the player score here.
+        //scoreCountP1 = 18; 
+        playersNames[0].indiScore = scoreCountP1;
+        playersNames[1].indiScore = scoreCountP2;
+        console.log('This is player 1s hopefully updated score: ' + playersNames[0].indiScore)
+        localStorage.setItem('playersUpdated', JSON.stringify(playersNames))
+
         // Player.setIndiPlayerScore() how can we call this from the other class here?
     }
     makeScoreVisInHtml() {
