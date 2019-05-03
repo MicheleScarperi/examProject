@@ -1,4 +1,4 @@
-//global variables.
+//Global variables.
 var cardHasFlipped = false;
 var firstCard;
 var secondCard; 
@@ -17,18 +17,14 @@ class Game {
         this.totalGameTime = totalGameTime;
         this.totalTurns = totalTurns;
         this.totalMiss = totalMiss;
-        this.statsP1 = statsP1; // displays P1's score and stats
-        this.statsP2 = statsP2; // these will be computed with game overall stats and indiPlayerStats
+        this.statsP1 = statsP1; 
+        this.statsP2 = statsP2;
     } 
-    
-    // set victory(winner) {
-    //  return this._winner = winner;
-    // }
 
+    //Creates the HTML dynamically and makes player names visible on the board. 
     initializeGame() {
         cardsArray.forEach(function(cardInput){
             
-            // onclick="flipCard(this)"
             var html = `<div class="back_card" data-id="${Math.random()}" data-attribute="${cardInput.name}">
             <img class="img1" src="${cardInput.img}">
             <img class="img2" src="${cardInput.backimg}">
@@ -43,44 +39,38 @@ class Game {
         document.getElementById('playerName1').innerHTML = playersNames[0].playerName;
         document.getElementById('playerName2').innerHTML = playersNames[1].playerName;
         
-        console.log('This is the safed player 1 score: ' + playersNames[0].indiScore)
-        
     }
 
     flipCard(event) {
+        
         var _this = event.target;
-        //console.log(_this.parentElement.dataset.attribute);
-        console.log(firstCard)
-        console.log(_this == firstCard, _this === firstCard)
+        
         if (!firstCard){
             cardHasFlipped = true;
             firstCard = _this;
             _this.parentElement.classList.add('flip');
-            console.log(_this.parentElement.dataset.attribute);
-            //console.log("this is the first card" + firstCard.parentElement.dataset.attribute);
+           
         } else if (!secondCard && firstCard.parentElement.dataset.id !== _this.parentElement.dataset.id) {
             secondCard = _this;
             _this.parentElement.classList.add('flip');
-            //console.log("this is the second card" + secondCard.parentElement.dataset.attribute);
+            
             this.checkForMatch();
             this.checkGameProgress();
             this.makeScoreVisInHtml();
         }
-    //If it is a match, disable both cards (remove eventlisteners);
     }
 
     checkForMatch() {
-        if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute  ) { 
+        
+        totalCount = totalScore + totalMiss;
+        if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) { 
             this.disableCards();
             totalScore++;
-            totalCount = totalScore + totalMiss;
-            console.log(totalCount);
-        
+            
             if (totalCount % 2 == 0){
                 scoreCountP1++;
             
             console.log('this is the score of player 1 '+ scoreCountP1);}
-            //console.log("match, cards have been disabled due to match.");
             console.log("totalScore is: " + totalScore);
             
             if (totalCount % 2 !== 0){
@@ -88,28 +78,29 @@ class Game {
                 console.log('This is the score of player 2 '+scoreCountP2)
             }
            return;
-            } else { 
-            //missCountP1++;
+            
+        } else if (firstCard.parentElement.dataset.attribute !== secondCard.parentElement.dataset.attribute && totalCount % 2 == 0) { 
+            missCountP1++;
             totalMiss++;
             this.unflipCards();
-            // console.log("misscountp1= " + missCountP1);
+            console.log("misscountp1= " + missCountP1);
             console.log("totalMisscount is: " + totalMiss);
-            }
-            totalCount = totalScore + totalMiss;
-            console.log('This is the total count: '+ totalCount);
-            }
-            //this.determinePoints();
-
+        } else if (firstCard.parentElement.dataset.attribute !== secondCard.parentElement.dataset.attribute && totalCount % 2 !== 0) {
+            missCountP2++;
+            totalMiss++;
+            this.unflipCards();
+            console.log("misscountP2= " + missCountP2);
+            console.log("totalMIssCount is: " + totalMiss);
+        }   
+    }
+            
     disableCards() {
 
         firstCard.parentElement.removeEventListener('click', this.flipCard);
         secondCard.parentElement.removeEventListener('click', this.flipCard);
-        
-        //console.log("disableCards - cards are disabled now");
     
         this.resetBoard();
-        
-        //console.log("disableCards - Board has been reset");
+
     }
         
     unflipCards() {
@@ -122,45 +113,45 @@ class Game {
     
                 this.resetBoard();
             }, 1500);
-            //console.log("cards have been unflipped");
-        }
+            
+    }
 
 //This function resets the card variables so that we can keep playing.
 
     resetBoard() {
     
-    cardHasFlipped = false;
-    lockBoard = false;
-    firstCard = null;
-    secondCard = null; 
+        cardHasFlipped = false;
+        lockBoard = false;
+        firstCard = null;
+        secondCard = null; 
     
-    //console.log("board successfully reset")
     }
 
     checkGameProgress() {
+        
         var playersNames = JSON.parse(localStorage.getItem("player"));
+        
         if (scoreCountP1 + scoreCountP2 == 18) {
         alert('Congratulations, you guys finished the Game. ' + 'Scores are: ' + playersNames[0].playerName + " "
          + scoreCountP1 + ", " + playersNames[1].playerName + " " + scoreCountP2 + ".")
         }
-        //Simply update the player score here.
-        //scoreCountP1 = 18; 
+         
         playersNames[0].indiScore = scoreCountP1;
         playersNames[1].indiScore = scoreCountP2;
-        console.log('This is player 1s hopefully updated score: ' + playersNames[0].indiScore)
+        
+        playersNames[0].indiMiss = missCountP1;
+        playersNames[1].indiMiss = missCountP2;
+        
         localStorage.setItem('playersUpdated', JSON.stringify(playersNames))
 
-        // Player.setIndiPlayerScore() how can we call this from the other class here?
     }
+    
     makeScoreVisInHtml() {
         var p1Score = scoreCountP1;
         var p2Score = scoreCountP2;
-        //var p1Miss = missCountP1;
-        //var p2Miss = missCountP2;
+      
         document.getElementById('P1Html').innerHTML = p1Score;
         document.getElementById('P2Html').innerHTML = p2Score;
-        //document.getElementById('P1Miss').innerHTML = p1Miss;
-        //document.getElementById('P2Miss').innerHTML = p2Miss;
+    
     }
-
 }
