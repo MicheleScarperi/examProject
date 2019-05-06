@@ -9,7 +9,7 @@
 
 var players = [];
 
-// Safes player names to local Storage. 
+// Saves player names to local Storage. 
 const savePlayerNames = () => {
     localStorage.setItem('player', JSON.stringify(players))
 }
@@ -23,7 +23,7 @@ const submitBtnUI = document.getElementById('submit-btn')
 const playerName1UI = document.getElementById('playerName1')
 const playerName2UI = document.getElementById('playerName2')
 
-//On click, safe players inserted names and push them to the players array + safe to localStorage.
+//On click, safe players inserted names and push them to the players array + save to localStorage.
 submitBtnUI.onclick = function () {
 
     var playerName = playerName1UI.value;

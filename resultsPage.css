@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(img/backgroundimg.jpg);
+}
+
+.resultsContainer{
+    display: flex;
+    margin: 20%;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.resultsBoxP1, .resultsBoxP2{
+    max-height: 300px;
+    max-width: 200px;
+    background: gainsboro;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px;
+}
+

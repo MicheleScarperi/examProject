@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="resultsPage.css">
+    <title>Game Board - Learnorize</title>
+</head>
+<body>
+    <container class="resultsContainer">
+        <div class="resultsBoxP1">
+            <h2 id="player1Name">
+                Player 1
+            </h2>
+            <p>
+                Score
+            </p>
+            <p>
+                Misses
+            </p>
+        </div>
+        <div class="resultsBoxP2">
+            <h2 id="player2Name">
+                Player 2
+            </h2>
+            <p>
+                Score
+            </p>
+            <p>
+                Misses
+            </p>
+        </div>
+    </container>
+
+    <script>
+    var playersNames = JSON.parse(localStorage.getItem("player"));
+        document.getElementById('player1Name').innerHTML = playersNames[0].playerName;
+        document.getElementById('player2Name').innerHTML = playersNames[1].playerName;
+
+    </script>
+</body>
+
+</html>
