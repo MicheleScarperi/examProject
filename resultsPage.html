@@ -13,30 +13,46 @@
             <h2 id="player1Name">
                 Player 1
             </h2>
-            <p>
+            <h4>
                 Score
-            </p>
-            <p>
+            </h4>
+                <p id="player1Score">
+                0
+                </p>
+            <h4>
                 Misses
+            </h4>
+            <p id="player1Miss">
+                0
             </p>
         </div>
         <div class="resultsBoxP2">
             <h2 id="player2Name">
                 Player 2
             </h2>
-            <p>
+            <h4>
                 Score
-            </p>
-            <p>
+            </h4>
+                <p id="player2Score">
+                0
+                </p>
+            <h4>
                 Misses
-            </p>
+            </h4>
+                <p id="player2Miss">
+                0
+                </p>
         </div>
     </container>
 
     <script>
-    var playersNames = JSON.parse(localStorage.getItem("player"));
+    var playersNames = JSON.parse(localStorage.getItem("playersUpdated"));
         document.getElementById('player1Name').innerHTML = playersNames[0].playerName;
         document.getElementById('player2Name').innerHTML = playersNames[1].playerName;
+        document.getElementById('player1Score').innerHTML = playersNames[0].indiScore;
+        document.getElementById('player2Score').innerHTML = playersNames[1].indiScore;
+        document.getElementById('player1Miss').innerHTML = playersNames[0].indiMiss;
+        document.getElementById('player2Miss').innerHTML = playersNames[1].indiMiss;
 
     </script>
 </body>
