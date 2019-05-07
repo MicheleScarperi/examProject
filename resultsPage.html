@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="resultsPage.css">
     <title>Game Board - Learnorize</title>
 </head>
+
 <body>
     <container class="resultsContainer">
         <div class="resultsBoxP1">
@@ -16,9 +18,9 @@
             <h4>
                 Score
             </h4>
-                <p id="player1Score">
+            <p id="player1Score">
                 0
-                </p>
+            </p>
             <h4>
                 Misses
             </h4>
@@ -33,26 +35,36 @@
             <h4>
                 Score
             </h4>
-                <p id="player2Score">
+            <p id="player2Score">
                 0
-                </p>
+            </p>
             <h4>
                 Misses
             </h4>
-                <p id="player2Miss">
+            <p id="player2Miss">
                 0
-                </p>
+            </p>
+        </div>
+
+        <div class="formDiv">
+            <input type="button" value="Play again." id="playAgain-btn">
         </div>
     </container>
 
     <script>
-    var playersNames = JSON.parse(localStorage.getItem("playersUpdated"));
+        var playersNames = JSON.parse(localStorage.getItem("playersUpdated"));
         document.getElementById('player1Name').innerHTML = playersNames[0].playerName;
         document.getElementById('player2Name').innerHTML = playersNames[1].playerName;
         document.getElementById('player1Score').innerHTML = playersNames[0].indiScore;
         document.getElementById('player2Score').innerHTML = playersNames[1].indiScore;
         document.getElementById('player1Miss').innerHTML = playersNames[0].indiMiss;
         document.getElementById('player2Miss').innerHTML = playersNames[1].indiMiss;
+
+        let playAgain = document.getElementById('playAgain-btn')
+
+        playAgain.onclick = function () {
+            window.location.href = "./memory_board.html";
+        }
 
     </script>
 </body>
