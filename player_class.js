@@ -1,11 +1,11 @@
- class Player {
-    constructor(playerName,indiScore, indiMiss){
+class Player {
+    constructor(playerName, indiScore, indiMiss) {
         this.playerName = playerName;
         this.indiScore = indiScore; // individual Score
         this.indiMiss = indiMiss; // individual missmatches
 
     }
-} 
+}
 
 var players = [];
 
@@ -27,22 +27,22 @@ const playerName2UI = document.getElementById('playerName2')
 submitBtnUI.onclick = function () {
 
     var playerName = playerName1UI.value;
-    
+
     var firstPlayer = new Player(playerName1UI.value);
     console.log(firstPlayer);
-    
+
     players.push(new Player(playerName, 0, 0));
 
     playerName = playerName2UI.value;
-    
+
     var secondPlayer = new Player(playerName2UI.value);
     console.log(secondPlayer);
-    
+
     players.push(new Player(playerName, 0, 0));
-    
+
     savePlayerNames();
     loadPlayerNames();
-    
-window.location.href = "./memory_board.html";
+
+    window.location.href = "./memory_board.html";
 }
 
