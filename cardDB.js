@@ -2,15 +2,15 @@
 //Below there is also the function for shuffling.
 
 class card {
-    constructor(name, img){
+  constructor(name, img) {
     this._name = name;
     this.img = img;
     this.backimg = "img/cbs.png";
-    }
-    //Program doesnt work without the getter function below, but we don't know why!
-    get name() {
-        return this._name;
-    }
+  }
+  //Program doesnt work without the getter function below, but we don't know why!
+  get name() {
+    return this._name;
+  }
 }
 
 var trump = new card("trump", "img/trump.jpg")
@@ -52,16 +52,17 @@ var intel2 = new card("intel", "img/intel2.jpg")
 
 
 // This is our Database for the cards. 
-var cardsArray = [trump,trump2,netflix,netflix2,brian,brian2,einstein,einstein2,playstation,playstation2,airbnb,airbnb2,hoover,hoover2,uber,uber2,
-    ebay,ebay2,alibaba, alibaba2,facebook,facebook2,amazon,amazon2,adobe,adobe2, mastercard,
-    mastercard2,samsung,samsung2,jobs,jobs2,obama,obama2,intel,intel2]
+var cardsArray = [trump, trump2, netflix, netflix2, brian, brian2, einstein, einstein2, playstation, playstation2, airbnb, airbnb2, hoover, hoover2, uber, uber2,
+  ebay, ebay2, alibaba, alibaba2, facebook, facebook2, amazon, amazon2, adobe, adobe2, mastercard,
+  mastercard2, samsung, samsung2, jobs, jobs2, obama, obama2, intel, intel2]
 
-   
+
 
 
 // This is the section, that randomizes the memory cards on the board. 
 
-function shuffle() { 
-  cardsArray.sort(() => Math.random() - 0.5); 
-} 
+function shuffle() {
+  cardsArray.sort(() => Math.random() - 0.5);
+
+}
 shuffle();
