@@ -6,14 +6,14 @@ body{
     background-image: url(img/backgroundimg.jpg);
 }
 
-.resultsContainer{
+.resultsContainer {
     display: flex;
     margin: 20%;
     align-items: center;
     justify-content: center;  
 }
 
-.resultsBoxP1, .resultsBoxP2{
+.resultsBoxP1, .resultsBoxP2 {
     max-height: 300px;
     max-width: 200px;
     min-width: 130px;
