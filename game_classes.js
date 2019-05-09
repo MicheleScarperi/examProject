@@ -38,7 +38,6 @@ class Game {
         var playersNames = JSON.parse(localStorage.getItem("player"));
         document.getElementById('playerName1').innerHTML = playersNames[0].playerName;
         document.getElementById('playerName2').innerHTML = playersNames[1].playerName;
-
     }
 
     flipCard(event) {
@@ -57,6 +56,7 @@ class Game {
             this.checkForMatch();
             this.checkGameProgress();
             this.makeScoreVisInHtml();
+            this.playerTurn();
         }
     }
 
@@ -154,4 +154,16 @@ class Game {
         document.getElementById('P2Html').innerHTML = p2Score;
 
     }
+
+    playerTurn() {
+
+        const yourTurn = "It's your turn!"
+        if(totalCount % 2 == 0){
+            document.getElementById('player1turn').innerHTML = '';
+            document.getElementById('player2turn').innerHTML = yourTurn;
+    }   else{
+            document.getElementById('player2turn').innerHTML = '';
+            document.getElementById('player1turn').innerHTML = yourTurn;
+    }
+}
 }

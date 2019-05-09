@@ -54,12 +54,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
 }
-#scoreP1{
-    padding: 20px;
-    margin: 25px;
-    background-color: rgb(192, 143, 143);
-    border-radius: 5px;
-}
+
 #P1Html, #P2Html{
     text-align: center;
 }
@@ -67,9 +62,11 @@
     text-align: center;
 }
 
-#scoreP2{
+#scoreP1, #scoreP2{
     padding: 20px;
     margin: 25px;
     background-color: rgb(192, 143, 143);
     border-radius: 8px;
+    min-width: 180px;
+    text-align: center;
 }
