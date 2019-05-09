@@ -8,7 +8,7 @@ body{
 
 .resultsContainer {
     display: flex;
-    margin: 20%;
+    margin: 5%;
     align-items: center;
     justify-content: center;  
 }
@@ -23,5 +23,15 @@ body{
     padding: 30px;
     margin: 40px;
     text-align: center;
+}
+
+#playAgain-btn{
+    font-size: 30px;
+    
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    background: black;
+    color: white;
 }
 
