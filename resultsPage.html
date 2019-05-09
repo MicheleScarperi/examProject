@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <container class="resultsContainer">
+    <container class="resultsContainerScores">
         <div class="resultsBoxP1">
             <h2 id="player1Name">
                 Player 1
@@ -33,9 +33,6 @@
             <p id="player1Accuracy">
                 0 
             </p>
-        </div>
-        <div class="formDiv">
-            <input type="button" value="REMATCH" id="playAgain-btn">
         </div>
         <div class="resultsBoxP2">
             <h2 id="player2Name">
@@ -63,7 +60,15 @@
         </div>
         
     </container>
-
+    <container class="resultsContainerBtns">
+            <div class="formDiv">
+                    <input type="button" value="REMATCH" id="playAgain-btn">
+                </div>
+        
+                <div class="formDiv">
+                        <input type="button" value="NEW GAME" id="newGame-btn">
+                    </div>
+                </container>
     <script src="resultspage.js"></script>
 </body>
 

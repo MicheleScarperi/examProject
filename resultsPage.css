@@ -4,28 +4,35 @@ body{
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url(img/backgroundimg.jpg);
+    flex-direction: column
 }
 
-.resultsContainer {
+.resultsContainerScores  {
     display: flex;
-    margin: 5%;
+    margin: 1%;
     align-items: center;
-    justify-content: center;  
+    justify-content: center; 
 }
 
+.resultsContainerBtns{
+    display: flex;
+    margin: 1px;
+    align-items: center;
+    justify-content: center; 
+}
 .resultsBoxP1, .resultsBoxP2 {
     max-height: 300px;
     max-width: 200px;
     min-width: 130px;
-    min-height: 200px;
+    min-height: 150px;
     background: gainsboro;
     border-radius: 20px;
     padding: 30px;
-    margin: 40px;
+    margin: 10px;
     text-align: center;
 }
 
-#playAgain-btn{
+#playAgain-btn, #newGame-btn{
     font-size: 30px;
     -webkit-border-radius: 20;
     -moz-border-radius: 20;
