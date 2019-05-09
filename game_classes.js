@@ -158,12 +158,12 @@ class Game {
     playerTurn() {
 
         const yourTurn = "It's your turn!"
-        if(totalCount % 2 == 0){
+        if (totalCount % 2 == 0) {
             document.getElementById('player1turn').innerHTML = '';
             document.getElementById('player2turn').innerHTML = yourTurn;
-    }   else{
+        } else {
             document.getElementById('player2turn').innerHTML = '';
             document.getElementById('player1turn').innerHTML = yourTurn;
+        }
     }
-}
 }

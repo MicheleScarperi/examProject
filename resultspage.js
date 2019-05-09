@@ -14,13 +14,13 @@ playAgain.onclick = function () {
 
 let newGame = document.getElementById('newGame-btn')
 
-newGame.onclick =function () {
+newGame.onclick = function () {
     window.location.href = "./createPlayers.html";
 }
 
 const calcPlayersAccuracy = () => {
-    let accurP1 = Math.round(playersNames[0].indiScore / (playersNames[0].indiScore + playersNames[0].indiMiss)*100)+'%'
-    let accurP2 = Math.round(playersNames[1].indiScore / (playersNames[1].indiScore + playersNames[1].indiMiss)*100)+'%'
+    let accurP1 = Math.round(playersNames[0].indiScore / (playersNames[0].indiScore + playersNames[0].indiMiss) * 100) + '%'
+    let accurP2 = Math.round(playersNames[1].indiScore / (playersNames[1].indiScore + playersNames[1].indiMiss) * 100) + '%'
     document.getElementById('player1Accuracy').innerHTML = accurP1;
     document.getElementById('player2Accuracy').innerHTML = accurP2;
 }
