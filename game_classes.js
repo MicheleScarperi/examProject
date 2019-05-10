@@ -12,14 +12,14 @@ var totalScore = 0;
 var totalCount = 0;
 
 class Game {
-    constructor(winner, totalGameTime, totalTurns, totalMiss, statsP1, statsP2) {
-        this._winner = winner;
-        this.totalGameTime = totalGameTime;
-        this.totalTurns = totalTurns;
-        this.totalMiss = totalMiss;
-        this.statsP1 = statsP1;
-        this.statsP2 = statsP2;
-    }
+    // constructor(winner, totalGameTime, totalTurns, totalMiss, statsP1, statsP2) {
+    //     // this._winner = winner;
+    //     // this.totalGameTime = totalGameTime;
+    //     // this.totalTurns = totalTurns;
+    //     // this.totalMiss = totalMiss;
+    //     // this.statsP1 = statsP1;
+    //     // this.statsP2 = statsP2;
+    // }
 
     //Creates the HTML dynamically and makes player names visible on the board. 
     initializeGame() {
