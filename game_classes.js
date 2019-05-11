@@ -12,14 +12,6 @@ var totalScore = 0;
 var totalCount = 0;
 
 class Game {
-    // constructor(winner, totalGameTime, totalTurns, totalMiss, statsP1, statsP2) {
-    //     // this._winner = winner;
-    //     // this.totalGameTime = totalGameTime;
-    //     // this.totalTurns = totalTurns;
-    //     // this.totalMiss = totalMiss;
-    //     // this.statsP1 = statsP1;
-    //     // this.statsP2 = statsP2;
-    // }
 
     //Creates the HTML dynamically and makes player names visible on the board. 
     initializeGame() {
@@ -70,13 +62,11 @@ class Game {
             if (totalCount % 2 == 0) {
                 scoreCountP1++;
 
-                console.log('this is the score of player 1 ' + scoreCountP1);
             }
-            console.log("totalScore is: " + totalScore);
 
             if (totalCount % 2 !== 0) {
                 scoreCountP2++
-                console.log('This is the score of player 2 ' + scoreCountP2)
+
             }
             return;
 
@@ -84,14 +74,12 @@ class Game {
             missCountP1++;
             totalMiss++;
             this.unflipCards();
-            console.log("misscountp1= " + missCountP1);
-            console.log("totalMisscount is: " + totalMiss);
+
         } else if (firstCard.parentElement.dataset.attribute !== secondCard.parentElement.dataset.attribute && totalCount % 2 !== 0) {
             missCountP2++;
             totalMiss++;
             this.unflipCards();
-            console.log("misscountP2= " + missCountP2);
-            console.log("totalMIssCount is: " + totalMiss);
+
         }
     }
 
