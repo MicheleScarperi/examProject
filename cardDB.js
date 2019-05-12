@@ -7,12 +7,13 @@ class card {
     this.img = img;
     this.backimg = "img/cbs.png";
   }
-  //Program doesnt work without the getter function below, but we don't know why!
+  //On game board load, the programme returns all the names of the cards.
   get name() {
+
     return this._name;
   }
 }
-
+// We can add these as an array without the var declaration.
 var trump = new card("trump", "img/trump.jpg")
 var trump2 = new card("trump", "img/trump2.jpg")
 var netflix = new card("netflix", "img/netflix.jpg")
