@@ -1,9 +1,6 @@
 var game = new Game();
 
-
-
 game.initializeGame();
-
 
 const cards = document.querySelectorAll('.back_card');
 //Function that adds a css class to the .back_card css class.
