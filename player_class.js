@@ -20,9 +20,9 @@ const loadPlayerNames = () => {
 }
 
 const submitBtnUI = document.getElementById('submit-btn')
-console.log("This is the typeOf SumbmitBtnUI= " + typeof submitBtnUI)
+
 const playerName1UI = document.getElementById('playerName1')
-console.log("This is the typeOf playerName1UI= " + typeof playerName1UI)
+
 const playerName2UI = document.getElementById('playerName2')
 
 //On click, save players inserted names and push them to the players array + save to localStorage.
@@ -30,15 +30,15 @@ submitBtnUI.onclick = function () {
 
     var playerName = playerName1UI.value;
 
-    var firstPlayer = new Player(playerName1UI.value);
-    console.log(firstPlayer);
+    new Player(playerName1UI.value);
+
 
     players.push(new Player(playerName, 0, 0));
 
     playerName = playerName2UI.value;
 
-    var secondPlayer = new Player(playerName2UI.value);
-    console.log(secondPlayer);
+    new Player(playerName2UI.value);
+
 
     players.push(new Player(playerName, 0, 0));
 
