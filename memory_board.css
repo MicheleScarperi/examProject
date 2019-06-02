@@ -32,6 +32,10 @@
    padding: 8px; */
 }
 
+.back_card.matched {
+    visibility: hidden;
+}
+
 .img1, .img2{
     position: absolute;
     backface-visibility: hidden;

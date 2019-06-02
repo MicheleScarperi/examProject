@@ -56,8 +56,11 @@ class Game {
 
         totalCount = totalScore + totalMiss;
         if (firstCard.parentElement.dataset.attribute === secondCard.parentElement.dataset.attribute) {
-            this.disableCards();
+            setTimeout(() => {
+                this.disableCards();
+            }, 1500)
             totalScore++;
+
 
             if (totalCount % 2 == 0) {
                 scoreCountP1++;
@@ -84,6 +87,8 @@ class Game {
     }
 
     disableCards() {
+        firstCard.parentElement.classList.add('matched')
+        secondCard.parentElement.classList.add('matched')
 
         firstCard.parentElement.removeEventListener('click', this.flipCard);
         secondCard.parentElement.removeEventListener('click', this.flipCard);
