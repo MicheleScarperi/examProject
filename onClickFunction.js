@@ -1,6 +1,5 @@
 //On click, save players inserted names and push them to the players array + save to localStorage.
 submitBtnUI.onclick = function () {
-
     var playerName = playerName1UI.value;
 
     new Player(playerName1UI.value);
@@ -19,4 +18,11 @@ submitBtnUI.onclick = function () {
     loadPlayerNames();
 
     window.location.href = "./memory_board.html";
+    
+    if(!playerName){
+        console.log('nothing')
+        alert('Please insert names')
+        window.location.href = "./createPlayers.html";
+        return;
+    } 
 }
