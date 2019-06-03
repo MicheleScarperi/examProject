@@ -1,8 +1,6 @@
 //Global variables.
-var cardHasFlipped = false;
 var firstCard;
 var secondCard;
-var lockBoard = false;
 var scoreCountP1 = 0;
 var missCountP1 = 0;
 var scoreCountP2 = 0;
@@ -37,7 +35,6 @@ class Game {
         var _this = event.target;
 
         if (!firstCard) {
-            cardHasFlipped = true;
             firstCard = _this;
             _this.parentElement.classList.add('flip');
 
@@ -99,8 +96,6 @@ class Game {
 
     unflipCards() {
 
-        lockBoard = true;
-
         setTimeout(() => {
             firstCard.parentElement.classList.remove('flip');
             secondCard.parentElement.classList.remove('flip');
@@ -114,8 +109,6 @@ class Game {
 
     resetBoard() {
 
-        cardHasFlipped = false;
-        lockBoard = false;
         firstCard = null;
         secondCard = null;
 
