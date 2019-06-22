@@ -1,9 +1,8 @@
 //On click, save players inserted names and push them to the players array + save to localStorage.
 submitBtnUI.onclick = function () {
+    
     var playerName = playerName1UI.value;
     var playerName2 = playerName2UI.value;
-
-
 
     if (playerName == "" || playerName2 == "") {
         alert('Please insert names')
